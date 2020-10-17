@@ -9,7 +9,6 @@ import Foundation
 import Combine
 import Alamofire
 import KeychainAccess
-import SwiftyUserDefaults
 
 // Future Reference:
 // - https://medium.com/@rashidium/generic-api-response-handling-with-codable-in-swift-5-using-alamofire-5-9809522de87
