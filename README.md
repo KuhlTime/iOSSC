@@ -5,6 +5,8 @@ This application works in conjunction with my node-ossc web server which recives
 
 The endpoint for the API is located at [https://api.kuhlti.me/ossc/modules](https://api.kuhlti.me/ossc/modules).
 
+![Mockup](https://github.com/KuhlTime/iOSSC/blob/main/assets/mockup.png?raw=true)
+
 ### Web App
 
 Besides the iOS Client there is also a web based application available. Check out: [https://hsd.kuhlti.me](https://hsd.kuhlti.me)
