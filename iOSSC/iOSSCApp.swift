@@ -9,9 +9,17 @@ import SwiftUI
 
 @main
 struct iOSSCApp: App {
+    @ObservedObject var manager = APIManager(enviorment: .production)
+    
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            if (manager.isLoggedIn) {
+                ContentView().environmentObject(manager)
+            } else if (manager.isLoggingIn) {
+                LoadingScreen()
+            } else {
+                LoginView().environmentObject(manager)
+            }
         }
     }
 }
