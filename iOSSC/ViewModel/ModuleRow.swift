@@ -22,8 +22,9 @@ struct ModuleRow: View {
         HStack(spacing: 0) {
             VStack(alignment: .leading) {
                 Text(module.name)
-                Text(module.id.description)
+                Text("\(module.id.description) - \(module.passed ? "Bestanden" : "Nicht Bestanden")")
                     .font(.caption)
+                    .foregroundColor(.gray)
             }
             
             Spacer()

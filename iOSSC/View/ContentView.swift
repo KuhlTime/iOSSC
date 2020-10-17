@@ -30,7 +30,7 @@ struct ContentView: View {
             .background(
                 BackgroundView()
             )
-            .navigationBarItems(trailing: logoutButton)
+            .navigationBarItems(leading: summaryLabel, trailing: logoutButton)
         }
     }
     
@@ -42,6 +42,16 @@ struct ContentView: View {
         .padding(.vertical, 4)
         .padding(.horizontal, 14)
         .background(Capsule().foregroundColor(Color.white))
+    }
+    
+    var summaryLabel: some View {
+        Text(summaryText)
+            .foregroundColor(.gray)
+    }
+    
+    var summaryText: String {
+        let grade = String(format: "%.2f", manager.avgGrade ?? "")
+        return "Ø \(grade) - CP \(manager.totalCreditPoints?.description ?? "-")"
     }
 }
 

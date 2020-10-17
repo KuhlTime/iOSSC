@@ -40,7 +40,7 @@ extension Grade {
         case let x where 4.0 >= x && x > 3.5:
             array = ["🥵"]
         case let x where x == 5:
-            array = ["😡", "🤬"]
+            array = ["🤬"]
         default:
             return nil
         }

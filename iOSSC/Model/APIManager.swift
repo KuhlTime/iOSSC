@@ -41,6 +41,14 @@ class APIManager: ObservableObject {
         return data?.modules ?? []
     }
     
+    var avgGrade: Grade? {
+        return data?.avgGrade
+    }
+    
+    var totalCreditPoints: Int? {
+        return data?.totalCreditPoints
+    }
+    
     /**
      Returns whether the user is currently logged in
      */
