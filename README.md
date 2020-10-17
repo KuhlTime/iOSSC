@@ -7,7 +7,8 @@
 
 A iOS client application for retrieving your Grades from the OSSC servers.
 
-This application works in conjunction with my node-ossc web server which recives and processes the grades page provided by the OSSC and returns a developer friendly JSON object.
+This application works in conjunction with my node-ossc web server which recives and processes the grades page provided by the OSSC.
+The Server then returns a developer friendly JSON object back to the client application. 
 
 The endpoint for the API is located at [https://api.kuhlti.me/ossc/modules](https://api.kuhlti.me/ossc/modules).
 
