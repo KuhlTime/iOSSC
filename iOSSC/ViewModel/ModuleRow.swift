@@ -37,7 +37,7 @@ struct ModuleRow: View {
                 .padding(.horizontal, 10)
                 .foregroundColor(.white)
                 .background(Capsule().foregroundColor(color).onTapGesture {
-                    Haptic.impact(.medium).generate()
+                    Haptic.impact(.light).generate()
                     mode.next()
                 })
         }
