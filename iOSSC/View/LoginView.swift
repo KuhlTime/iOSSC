@@ -42,6 +42,9 @@ struct LoginView: View {
                     .padding(.vertical, 10)
                     .background(Color(#colorLiteral(red: 0.9019607843, green: 0, blue: 0.1568627451, alpha: 1)))
                     .cornerRadius(6)
+                    .onTapGesture {
+                        login()
+                    }
                 }
                 .padding()
             }
