@@ -16,4 +16,18 @@ struct Module: Decodable, Identifiable {
     let creditPoints: Int
     let grade: Grade?
     let attempts: Attempts
+    
+    private var examGrade: Grade? {
+        return exams.first { exam in
+            return exam.passed
+        }?.grade
+    }
+    
+    /**
+     If the module has no grade assigned to it.
+     The grade of the first passed exam is getting returned.
+     */
+    var computedGrade: Grade? {
+        return grade ?? examGrade
+    }
 }

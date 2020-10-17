@@ -41,18 +41,22 @@ struct ModuleRow: View {
     }
     
     var color: Color {
+        let grade = module.computedGrade
+        
         if mode == .color || mode == .colorEmoji {
-            return module.grade?.color ?? Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1))
+            return grade?.color ?? Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1))
         } else {
             return Color(#colorLiteral(red: 0.2549019754, green: 0.2745098174, blue: 0.3019607961, alpha: 1))
         }
     }
     
     var text: String? {
+        let grade = module.computedGrade
+        
         if mode == .normalEmoji || mode == .colorEmoji {
-            return module.grade?.emoji
+            return grade?.emoji
         } else {
-            return module.grade?.description
+            return grade?.description
         }
     }
 }
