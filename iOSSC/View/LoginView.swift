@@ -32,6 +32,7 @@ struct LoginView: View {
                     }
                     .disabled(manager.isLoggingIn)
                     .foregroundColor(.black)
+                    .padding(.bottom)
                     
                     Button("Login") {
                         login()
