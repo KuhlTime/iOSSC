@@ -28,6 +28,7 @@ struct Module: Decodable, Identifiable {
      The grade of the first passed exam is getting returned.
      */
     var computedGrade: Grade? {
-        return grade ?? examGrade
+        let failed = attempts.exams != 0
+        return grade ?? examGrade ?? (failed ? 5.0 : nil)
     }
 }
