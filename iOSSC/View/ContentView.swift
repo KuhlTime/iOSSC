@@ -10,7 +10,7 @@ import SwiftUI
 struct ContentView: View {
     @EnvironmentObject var manager: APIManager
     
-    @State var mode: GradeMode = .colorEmoji
+    @State private var mode: GradeMode = .colorEmoji
     
     init() {
         UITableView.appearance().backgroundColor = .clear
@@ -51,6 +51,7 @@ struct ContentView: View {
     
     var summaryText: String {
         let grade = String(format: "%.2f", manager.avgGrade ?? "")
+        // let gradeText = mode.isEmojiMode ? manager.avgGrade?.emoji : grade
         return "Ø \(grade) - CP \(manager.totalCreditPoints?.description ?? "-")"
     }
 }

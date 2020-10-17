@@ -8,7 +8,7 @@
 import Foundation
 
 enum GradeMode {
-    case normal, color, normalEmoji, colorEmoji
+    case normal, color, emoji, colorEmoji
     
     static var all: [GradeMode] {
         return [.normal, .colorEmoji]
@@ -17,5 +17,9 @@ enum GradeMode {
     mutating func next() {
         let i = GradeMode.all.firstIndex(of: self)!
         self = GradeMode.all[(i + 1) % GradeMode.all.count]
+    }
+    
+    var isEmojiMode: Bool {
+        return self == .colorEmoji || self == .emoji
     }
 }

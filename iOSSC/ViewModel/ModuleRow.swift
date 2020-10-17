@@ -54,7 +54,7 @@ struct ModuleRow: View {
     var text: String? {
         let grade = module.computedGrade
         
-        if mode == .normalEmoji || mode == .colorEmoji {
+        if mode == .emoji || mode == .colorEmoji {
             return grade?.emoji
         } else {
             return grade?.description
