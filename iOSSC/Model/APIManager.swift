@@ -67,10 +67,10 @@ class APIManager: ObservableObject {
             return
         }
         
+        loginState = .loggingIn
+        
         self.username = username
         self.password = password
-        
-        loginState = .loggingIn
         
         do {
             try keychain.set(username, key: "username")
@@ -107,9 +107,10 @@ class APIManager: ObservableObject {
             username = try keychain.get("username")
             password = try keychain.get("password")
             
-            print("Restored credentials")
-            
-            login(username, password)
+            if (username != nil && password != nil) {
+                print("Restored credentials")
+                login(username, password)
+            }
         } catch {
             print(error.localizedDescription)
             return

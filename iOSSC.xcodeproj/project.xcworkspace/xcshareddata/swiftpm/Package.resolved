@@ -11,6 +11,15 @@
         }
       },
       {
+        "package": "Haptica",
+        "repositoryURL": "https://github.com/efremidze/Haptica",
+        "state": {
+          "branch": null,
+          "revision": "4084702c85102c2d17d58e42ec5a750094944864",
+          "version": "3.0.2"
+        }
+      },
+      {
         "package": "KeychainAccess",
         "repositoryURL": "https://github.com/kishikawakatsumi/KeychainAccess",
         "state": {

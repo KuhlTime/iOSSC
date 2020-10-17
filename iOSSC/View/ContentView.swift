@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Haptica
 
 struct ContentView: View {
     @EnvironmentObject var manager: APIManager
@@ -36,6 +37,7 @@ struct ContentView: View {
     
     var logoutButton: some View {
         Button("Logout") {
+            Haptic.impact(.medium).generate()
             manager.logout()
         }
         .foregroundColor(.black)

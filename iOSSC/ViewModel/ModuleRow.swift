@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Haptica
 
 struct ModuleRow: View {
     let module: Module
@@ -35,9 +36,10 @@ struct ModuleRow: View {
                 .padding(.vertical, 4)
                 .padding(.horizontal, 10)
                 .foregroundColor(.white)
-                .background(Capsule().foregroundColor(color).onTapGesture(count: /*@START_MENU_TOKEN@*/1/*@END_MENU_TOKEN@*/, perform: {
+                .background(Capsule().foregroundColor(color).onTapGesture {
+                    Haptic.impact(.medium).generate()
                     mode.next()
-                }))
+                })
         }
     }
     

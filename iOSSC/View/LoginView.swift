@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Haptica
 
 struct LoginView: View {
     @EnvironmentObject var manager: APIManager
@@ -56,6 +57,9 @@ struct LoginView: View {
     }
     
     private func login() {
+        guard !username.isEmpty && !password.isEmpty else { return }
+        
+        Haptic.impact(.medium).generate()
         manager.login(username, password)
     }
 }
