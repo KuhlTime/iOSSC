@@ -27,7 +27,6 @@
 		138E8461253AFD1500B1B8AD /* HSDSans.otf in Resources */ = {isa = PBXBuildFile; fileRef = 138E8460253AFD1500B1B8AD /* HSDSans.otf */; };
 		138E8466253B00A200B1B8AD /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138E8465253B00A200B1B8AD /* Placeholder.swift */; };
 		138E846A253B04E600B1B8AD /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 138E8469253B04E600B1B8AD /* KeychainAccess */; };
-		138E846E253B06B200B1B8AD /* SwiftyUserDefaults in Frameworks */ = {isa = PBXBuildFile; productRef = 138E846D253B06B200B1B8AD /* SwiftyUserDefaults */; };
 		138E8472253B139A00B1B8AD /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138E8471253B139A00B1B8AD /* LoadingScreen.swift */; };
 		139812D5253A2C7F00CEB9D4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139812D4253A2C7F00CEB9D4 /* Color.swift */; };
 		139812D9253A347100CEB9D4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139812D8253A347100CEB9D4 /* LoginView.swift */; };
@@ -65,7 +64,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				138E846A253B04E600B1B8AD /* KeychainAccess in Frameworks */,
-				138E846E253B06B200B1B8AD /* SwiftyUserDefaults in Frameworks */,
 				136BCFDB2539D64300C77D96 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -193,7 +191,6 @@
 			packageProductDependencies = (
 				136BCFDA2539D64300C77D96 /* Alamofire */,
 				138E8469253B04E600B1B8AD /* KeychainAccess */,
-				138E846D253B06B200B1B8AD /* SwiftyUserDefaults */,
 			);
 			productName = iOSSC;
 			productReference = 132160A92539BE74003D3489 /* iOSSC.app */;
@@ -225,7 +222,6 @@
 			packageReferences = (
 				136BCFD92539D64300C77D96 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				138E8468253B04E600B1B8AD /* XCRemoteSwiftPackageReference "KeychainAccess" */,
-				138E846C253B06B200B1B8AD /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */,
 			);
 			productRefGroup = 132160AA2539BE74003D3489 /* Products */;
 			projectDirPath = "";
@@ -478,14 +474,6 @@
 				minimumVersion = 4.2.1;
 			};
 		};
-		138E846C253B06B200B1B8AD /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/sunshinejr/SwiftyUserDefaults";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 5.0.0;
-			};
-		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -498,11 +486,6 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 138E8468253B04E600B1B8AD /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
-		};
-		138E846D253B06B200B1B8AD /* SwiftyUserDefaults */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 138E846C253B06B200B1B8AD /* XCRemoteSwiftPackageReference "SwiftyUserDefaults" */;
-			productName = SwiftyUserDefaults;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
