@@ -7,15 +7,15 @@
 
 import SwiftUI
 import Haptica
+import SwiftUIRefresh
 
 struct ContentView: View {
     @EnvironmentObject var manager: APIManager
-    
     @State private var mode: GradeMode = .colorEmoji
+    @State private var pullToRefreshShowing = false
     
     init() {
         UITableView.appearance().backgroundColor = .clear
-        // UITableView.appearance().separatorStyle = .none
         UITableViewCell.appearance().backgroundColor = .clear
         UINavigationBar.appearance().backgroundColor = .clear
     }
@@ -31,7 +31,12 @@ struct ContentView: View {
             .background(
                 BackgroundView()
             )
-            .navigationBarItems(leading: summaryLabel, trailing: logoutButton)
+            .navigationBarItems(leading: summaryLabel, trailing: HStack { logoutButton })
+            .pullToRefresh(isShowing: $pullToRefreshShowing) {
+                manager.refresh {
+                    pullToRefreshShowing = false
+                }
+            }
         }
     }
     

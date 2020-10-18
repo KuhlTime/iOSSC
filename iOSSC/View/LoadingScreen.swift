@@ -18,7 +18,7 @@ struct LoadingScreen: View {
                 ProgressView().padding()
                 HStack {
                     Image(systemSymbol: .boltHorizontalCircleFill)
-                    Text("Server spooling up.")
+                    Text("Server is spooling up.")
                         .multilineTextAlignment(.center)
                 }
                 .opacity(showText ? 1 : 0)
@@ -26,7 +26,7 @@ struct LoadingScreen: View {
             .foregroundColor(.white)
         }
         .onAppear {
-            withAnimation(Animation.easeIn(duration: 1).delay(2)) {
+            withAnimation(Animation.easeIn(duration: 1).delay(3)) {
                 showText = true
             }
         }
