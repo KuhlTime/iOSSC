@@ -19,7 +19,6 @@ The endpoint for the API is located at [https://api.kuhlti.me/ossc/modules](http
 Besides the iOS Client there is also a web based application available. Check out: [https://hsd.kuhlti.me](https://hsd.kuhlti.me)
 
 ## Installation
----
 These steps while help you to install a local version of this app on your device.
 
 1. Download Xcode from the Mac App Store.
