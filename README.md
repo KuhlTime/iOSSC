@@ -15,7 +15,8 @@ The Server then returns a developer friendly JSON object back to the client appl
 The endpoint for the API is located at [https://api.kuhlti.me/ossc/modules](https://api.kuhlti.me/ossc/modules).
 
 ## Web App
-Besides the iOS Client there is also a web based application available. Check out: [https://hsd.kuhlti.me](https://hsd.kuhlti.me)
+Besides the iOS Client there is also a web based application available. <br>
+Check out: [https://hsd.kuhlti.me](https://hsd.kuhlti.me)
 
 ## Installation
 These steps while help you to install a local version of this app on your device.
