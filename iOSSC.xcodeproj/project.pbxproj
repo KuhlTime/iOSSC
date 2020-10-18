@@ -23,6 +23,7 @@
 		136BCFDB2539D64300C77D96 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 136BCFDA2539D64300C77D96 /* Alamofire */; };
 		136BCFE42539DAB900C77D96 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136BCFE32539DAB900C77D96 /* APIResponse.swift */; };
 		13709B57253C381000C422B8 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 13709B56253C381000C422B8 /* SFSafeSymbols */; };
+		1373EE6B253CACD20088AB0F /* SwiftUIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 1373EE6A253CACD20088AB0F /* SwiftUIRefresh */; };
 		138E845A253AF7C800B1B8AD /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138E8459253AF7C800B1B8AD /* BackgroundView.swift */; };
 		138E845D253AF7F000B1B8AD /* GradeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138E845C253AF7F000B1B8AD /* GradeMode.swift */; };
 		138E8461253AFD1500B1B8AD /* HSDSans.otf in Resources */ = {isa = PBXBuildFile; fileRef = 138E8460253AFD1500B1B8AD /* HSDSans.otf */; };
@@ -65,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1373EE6B253CACD20088AB0F /* SwiftUIRefresh in Frameworks */,
 				13EB1D2C253B6C57007D79D8 /* Haptica in Frameworks */,
 				138E846A253B04E600B1B8AD /* KeychainAccess in Frameworks */,
 				13709B57253C381000C422B8 /* SFSafeSymbols in Frameworks */,
@@ -197,6 +199,7 @@
 				138E8469253B04E600B1B8AD /* KeychainAccess */,
 				13EB1D2B253B6C57007D79D8 /* Haptica */,
 				13709B56253C381000C422B8 /* SFSafeSymbols */,
+				1373EE6A253CACD20088AB0F /* SwiftUIRefresh */,
 			);
 			productName = iOSSC;
 			productReference = 132160A92539BE74003D3489 /* iOSSC.app */;
@@ -230,6 +233,7 @@
 				138E8468253B04E600B1B8AD /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				13EB1D2A253B6C57007D79D8 /* XCRemoteSwiftPackageReference "Haptica" */,
 				13709B55253C381000C422B8 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
+				1373EE69253CACD20088AB0F /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */,
 			);
 			productRefGroup = 132160AA2539BE74003D3489 /* Products */;
 			projectDirPath = "";
@@ -484,6 +488,14 @@
 				minimumVersion = 1.2.0;
 			};
 		};
+		1373EE69253CACD20088AB0F /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/timbersoftware/SwiftUIRefresh.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
 		138E8468253B04E600B1B8AD /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
@@ -512,6 +524,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 13709B55253C381000C422B8 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
 			productName = SFSafeSymbols;
+		};
+		1373EE6A253CACD20088AB0F /* SwiftUIRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1373EE69253CACD20088AB0F /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */;
+			productName = SwiftUIRefresh;
 		};
 		138E8469253B04E600B1B8AD /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;

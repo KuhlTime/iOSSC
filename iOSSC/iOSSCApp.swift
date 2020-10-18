@@ -13,7 +13,7 @@ struct iOSSCApp: App {
     
     var body: some Scene {
         WindowGroup {
-            if (manager.isLoggedIn) {
+            if (manager.isLoggedIn || manager.isRefreshing) {
                 ContentView().environmentObject(manager)
             } else if (manager.isLoggingIn) {
                 LoadingScreen()

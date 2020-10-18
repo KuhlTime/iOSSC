@@ -26,7 +26,7 @@ struct LoadingScreen: View {
             .foregroundColor(.white)
         }
         .onAppear {
-            withAnimation(Animation.easeIn(duration: 1).delay(2)) {
+            withAnimation(Animation.easeIn(duration: 1).delay(3)) {
                 showText = true
             }
         }

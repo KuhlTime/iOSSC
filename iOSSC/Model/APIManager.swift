@@ -62,6 +62,10 @@ class APIManager: ObservableObject {
         return loginState == .loggingIn
     }
     
+    var isRefreshing: Bool {
+        return loginState == .refreshing
+    }
+    
     func login(_ username: String?, _ password: String?) {
         guard let username = username, let password = password else {
             return
@@ -117,14 +121,20 @@ class APIManager: ObservableObject {
         }
     }
     
+    func refresh(completion: (() -> Void)? = nil) {
+        loginState = .refreshing
+        fetchModules(completion: { completion?() })
+    }
+    
     /**
     Fetches all available data for the provided username and password
     GET https://api.kuhlti.me/ossc/modules
      */
-    private func fetchModules() {
+    private func fetchModules(completion: (() -> Void)? = nil) {
         guard let username = username, let password = password else {
             loginState = .error
             print("Can't fetch without username and password")
+            completion?()
             return
         }
         
@@ -134,6 +144,7 @@ class APIManager: ObservableObject {
                     print(error.localizedDescription)
                     self.logout()
                     self.loginState = .error
+                    completion?()
                     return
                 }
                 
@@ -142,6 +153,7 @@ class APIManager: ObservableObject {
                     case .success:
                         guard let data = apiResponse.data else {
                             print("No data in APIResponse")
+                            completion?()
                             return
                         }
                         
@@ -149,10 +161,14 @@ class APIManager: ObservableObject {
                         self.data = data
                         self.loginState = .loggedIn
                         
+                        completion?()
+                        
                     case .failed:
                         print("API error with message: \(apiResponse.message ?? "NO MESSAGE PROVIDED")")
                         self.logout()
                         self.loginState = .error
+                        
+                        completion?()
                     }
                 }
             }
@@ -182,6 +198,6 @@ class APIManager: ObservableObject {
     }
     
     enum LoginState {
-        case loggedOut, loggingIn, loggedIn, error
+        case loggedOut, loggingIn, loggedIn, error, refreshing
     }
 }
