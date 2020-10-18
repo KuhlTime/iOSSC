@@ -6,12 +6,29 @@
 //
 
 import SwiftUI
+import SFSafeSymbols
 
 struct LoadingScreen: View {
+    @State private var showText = false
+    
     var body: some View {
         ZStack {
             BackgroundView()
-            ProgressView()
+            VStack {
+                ProgressView().padding()
+                HStack {
+                    Image(systemSymbol: .boltHorizontalCircleFill)
+                    Text("Server spooling up. ")
+                        .multilineTextAlignment(.center)
+                }
+                .opacity(showText ? 1 : 0)
+            }
+            .foregroundColor(.white)
+        }
+        .onAppear {
+            withAnimation(Animation.easeIn(duration: 1).delay(2)) {
+                showText = true
+            }
         }
     }
 }

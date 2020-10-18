@@ -22,6 +22,7 @@
 		136BCFD72539D5CB00C77D96 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136BCFD62539D5CB00C77D96 /* APIManager.swift */; };
 		136BCFDB2539D64300C77D96 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 136BCFDA2539D64300C77D96 /* Alamofire */; };
 		136BCFE42539DAB900C77D96 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136BCFE32539DAB900C77D96 /* APIResponse.swift */; };
+		13709B57253C381000C422B8 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 13709B56253C381000C422B8 /* SFSafeSymbols */; };
 		138E845A253AF7C800B1B8AD /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138E8459253AF7C800B1B8AD /* BackgroundView.swift */; };
 		138E845D253AF7F000B1B8AD /* GradeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138E845C253AF7F000B1B8AD /* GradeMode.swift */; };
 		138E8461253AFD1500B1B8AD /* HSDSans.otf in Resources */ = {isa = PBXBuildFile; fileRef = 138E8460253AFD1500B1B8AD /* HSDSans.otf */; };
@@ -66,6 +67,7 @@
 			files = (
 				13EB1D2C253B6C57007D79D8 /* Haptica in Frameworks */,
 				138E846A253B04E600B1B8AD /* KeychainAccess in Frameworks */,
+				13709B57253C381000C422B8 /* SFSafeSymbols in Frameworks */,
 				136BCFDB2539D64300C77D96 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -194,6 +196,7 @@
 				136BCFDA2539D64300C77D96 /* Alamofire */,
 				138E8469253B04E600B1B8AD /* KeychainAccess */,
 				13EB1D2B253B6C57007D79D8 /* Haptica */,
+				13709B56253C381000C422B8 /* SFSafeSymbols */,
 			);
 			productName = iOSSC;
 			productReference = 132160A92539BE74003D3489 /* iOSSC.app */;
@@ -226,6 +229,7 @@
 				136BCFD92539D64300C77D96 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				138E8468253B04E600B1B8AD /* XCRemoteSwiftPackageReference "KeychainAccess" */,
 				13EB1D2A253B6C57007D79D8 /* XCRemoteSwiftPackageReference "Haptica" */,
+				13709B55253C381000C422B8 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
 			);
 			productRefGroup = 132160AA2539BE74003D3489 /* Products */;
 			projectDirPath = "";
@@ -470,6 +474,14 @@
 				minimumVersion = 5.2.2;
 			};
 		};
+		13709B55253C381000C422B8 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/piknotech/SFSafeSymbols";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.2.0;
+			};
+		};
 		138E8468253B04E600B1B8AD /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
@@ -493,6 +505,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 136BCFD92539D64300C77D96 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		13709B56253C381000C422B8 /* SFSafeSymbols */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 13709B55253C381000C422B8 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
+			productName = SFSafeSymbols;
 		};
 		138E8469253B04E600B1B8AD /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;
