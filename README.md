@@ -22,10 +22,10 @@ Besides the iOS Client there is also a web based application available. <br>
 These steps while help you to install a local version of this app on your device.
 
 1. Download Xcode from the Mac App Store.
-2. Once installed you should be able to open the `iOSSC.xcodeproj` file. Alternativly you can press the green download button at the root of this repository and press the Button `Open with Xcode`.
-3. Once open you should be presented with the application's code. Go ahead and select the upper most item from the list on the left `iOSSC`.
-4. Under `Targets > iOSSC` select `Signing & Capabilites` you there have to "sign" your application with your personal apple id.
-5. Once the application has been signed you can choose either a Simulator or a real physical device from the dropdown menu next to the status bar on the top.
+2. Once installed you should be able to open the `iOSSC.xcodeproj` file. Alternativly you can press the green download button at the root of this repository and hit `Open with Xcode`.
+3. Once opened up you should be presented with the application's code. Go ahead and select the upper most item from the list on the left `iOSSC`.
+4. Under `Targets > iOSSC` select `Signing & Capabilites` you there have to "sign" your application with your personal Apple id.
+5. Once the application has been signed you can choose either a simulator or a real physical device from the dropdown menu next to the status bar on the top.
 6. Hit the play button and the application should start running.
 
 ![Xcode Setup](https://github.com/KuhlTime/iOSSC/blob/main/assets/xcode-setup.png?raw=true)
