@@ -18,7 +18,7 @@ struct LoadingScreen: View {
                 ProgressView().padding()
                 HStack {
                     Image(systemSymbol: .boltHorizontalCircleFill)
-                    Text("Server spooling up.")
+                    Text("Server is spooling up.")
                         .multilineTextAlignment(.center)
                 }
                 .opacity(showText ? 1 : 0)
