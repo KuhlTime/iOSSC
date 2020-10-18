@@ -1,9 +1,11 @@
 ![Mockup](https://github.com/KuhlTime/iOSSC/blob/main/assets/mockup.png?raw=true)
 
 # iOSSC
+ [![twitter](https://img.shields.io/badge/Twitter-%40KuhlTime-1DA1F2)](https://twitter.com/@KuhlTime)
 
 [![swift-version](https://img.shields.io/badge/swift-5.3-orange.svg)](https://github.com/apple/swift)
 [![platforms](https://img.shields.io/badge/platform-iOS-lightgrey)]()
+
 
 A iOS client application for retrieving your Grades from the OSSC servers.
 
@@ -28,7 +30,3 @@ These steps while help you to install a local version of this app on your device
 6. Hit the play button and the application should start running.
 
 ![Xcode Setup](https://github.com/KuhlTime/iOSSC/blob/main/assets/xcode-setup.png?raw=true)
-
-## Contact
----
-Twitter: [@KuhlTime](https://twitter.com/kuhltime)
