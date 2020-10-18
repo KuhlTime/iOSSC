@@ -3,7 +3,7 @@
 # iOSSC
 
 [![swift-version](https://img.shields.io/badge/swift-5.3-orange.svg)](https://github.com/apple/swift)
-[![platforms](https://img.shields.io/badge/platform-iOS%20%7C%20iPadOS-lightgrey)]()
+[![platforms](https://img.shields.io/badge/platform-iOS-lightgrey)]()
 
 A iOS client application for retrieving your Grades from the OSSC servers.
 
