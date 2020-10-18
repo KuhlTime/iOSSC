@@ -15,7 +15,6 @@ struct ContentView: View {
     
     init() {
         UITableView.appearance().backgroundColor = .clear
-        // UITableView.appearance().separatorStyle = .none
         UITableViewCell.appearance().backgroundColor = .clear
         UINavigationBar.appearance().backgroundColor = .clear
     }
