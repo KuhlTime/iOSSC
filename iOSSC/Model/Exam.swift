@@ -7,8 +7,10 @@
 
 import Foundation
 
-struct Exam: Decodable {
+struct Exam: Codable {
+    let semester: Semester
     let grade: Grade
     let passed: Bool
     let examinationDate: String
+    let score: Score
 }
