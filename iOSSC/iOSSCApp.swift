@@ -6,10 +6,12 @@
 //
 
 import SwiftUI
+import Sentry
 
 @main
 struct iOSSCApp: App {
     @ObservedObject var manager = APIManager(enviorment: .production)
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     
     var body: some Scene {
         WindowGroup {
