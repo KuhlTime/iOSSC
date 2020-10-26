@@ -3,16 +3,25 @@
     "pins": [
       {
         "package": "Alamofire",
-        "repositoryURL": "https://github.com/Alamofire/Alamofire",
+        "repositoryURL": "https://github.com/Alamofire/Alamofire.git",
         "state": {
           "branch": null,
-          "revision": "becd9a729a37bdbef5bc39dc3c702b99f9e3d046",
-          "version": "5.2.2"
+          "revision": "097e1f03166d49b31f824507fb85ad843b14fc13",
+          "version": "5.3.0"
+        }
+      },
+      {
+        "package": "SwiftUICharts",
+        "repositoryURL": "https://github.com/AppPear/ChartView.git",
+        "state": {
+          "branch": null,
+          "revision": "4699847a9ac0c694666cea3acef133498952566e",
+          "version": "1.5.4"
         }
       },
       {
         "package": "Haptica",
-        "repositoryURL": "https://github.com/efremidze/Haptica",
+        "repositoryURL": "https://github.com/efremidze/Haptica.git",
         "state": {
           "branch": null,
           "revision": "4084702c85102c2d17d58e42ec5a750094944864",
@@ -21,7 +30,7 @@
       },
       {
         "package": "KeychainAccess",
-        "repositoryURL": "https://github.com/kishikawakatsumi/KeychainAccess",
+        "repositoryURL": "https://github.com/kishikawakatsumi/KeychainAccess.git",
         "state": {
           "branch": null,
           "revision": "654d52d30f3dd4592e944c3e0bccb53178c992f6",
@@ -29,12 +38,21 @@
         }
       },
       {
-        "package": "SFSafeSymbols",
-        "repositoryURL": "https://github.com/piknotech/SFSafeSymbols",
+        "package": "Sentry",
+        "repositoryURL": "https://github.com/getsentry/sentry-cocoa.git",
         "state": {
           "branch": null,
-          "revision": "31a99db357f2b839a18ab598c4aa87a741bd6009",
-          "version": "1.2.0"
+          "revision": "b5ac6e41913d26ef8637ceadf9c15bf8c4bf062c",
+          "version": "6.0.6"
+        }
+      },
+      {
+        "package": "SFSafeSymbols",
+        "repositoryURL": "https://github.com/piknotech/SFSafeSymbols.git",
+        "state": {
+          "branch": null,
+          "revision": "e70811d1edcd385fb7c3284ae4bcc8cd3c8eb55a",
+          "version": "2.0.0"
         }
       },
       {
@@ -42,13 +60,13 @@
         "repositoryURL": "https://github.com/siteline/SwiftUI-Introspect.git",
         "state": {
           "branch": null,
-          "revision": "de5c32c15ae169cfcb27397ffb2734dcd0e1e6d5",
-          "version": "0.1.0"
+          "revision": "f1ec9da347a7fbe53c520d35434f6c2295650bd5",
+          "version": "0.1.1"
         }
       },
       {
         "package": "SwiftUIRefresh",
-        "repositoryURL": "https://github.com/timbersoftware/SwiftUIRefresh.git",
+        "repositoryURL": "https://github.com/siteline/SwiftUIRefresh.git",
         "state": {
           "branch": null,
           "revision": "fa8fac7b5eb5c729983a8bef65f094b5e0d12014",

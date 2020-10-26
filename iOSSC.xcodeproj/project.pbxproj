@@ -7,10 +7,22 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131AFE9D253DE4AE0050137E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131AFE9C253DE4AE0050137E /* AppDelegate.swift */; };
 		132160AD2539BE74003D3489 /* iOSSCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132160AC2539BE74003D3489 /* iOSSCApp.swift */; };
 		132160AF2539BE74003D3489 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132160AE2539BE74003D3489 /* ContentView.swift */; };
 		132160B12539BE76003D3489 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 132160B02539BE76003D3489 /* Assets.xcassets */; };
 		132160B42539BE76003D3489 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 132160B32539BE76003D3489 /* Preview Assets.xcassets */; };
+		136ACE4E2546C22400F6EA93 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 136ACE4D2546C22400F6EA93 /* SFSafeSymbols */; };
+		136ACE522546C2A700F6EA93 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 136ACE512546C2A700F6EA93 /* Alamofire */; };
+		136ACE562546C2B900F6EA93 /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 136ACE552546C2B900F6EA93 /* Sentry */; };
+		136ACE5A2546C2CB00F6EA93 /* Haptica in Frameworks */ = {isa = PBXBuildFile; productRef = 136ACE592546C2CB00F6EA93 /* Haptica */; };
+		136ACE5E2546C2DD00F6EA93 /* SwiftUIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 136ACE5D2546C2DD00F6EA93 /* SwiftUIRefresh */; };
+		136ACE622546C30C00F6EA93 /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 136ACE612546C30C00F6EA93 /* KeychainAccess */; };
+		136ACE662546C35200F6EA93 /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = 136ACE652546C35200F6EA93 /* SwiftUICharts */; };
+		136ACE6A2546C3B600F6EA93 /* Semester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136ACE692546C3B600F6EA93 /* Semester.swift */; };
+		136ACE6D2546C43500F6EA93 /* Score.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136ACE6C2546C43500F6EA93 /* Score.swift */; };
+		136ACE702546C46C00F6EA93 /* Attendes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136ACE6F2546C46C00F6EA93 /* Attendes.swift */; };
+		136ACE742546D9E700F6EA93 /* ModuleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136ACE732546D9E700F6EA93 /* ModuleDetailView.swift */; };
 		136BCFBF2539C77100C77D96 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136BCFBE2539C77100C77D96 /* Student.swift */; };
 		136BCFC22539C7B000C77D96 /* Exam.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136BCFC12539C7B000C77D96 /* Exam.swift */; };
 		136BCFC52539C7D900C77D96 /* WorkExperience.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136BCFC42539C7D900C77D96 /* WorkExperience.swift */; };
@@ -20,28 +32,28 @@
 		136BCFD12539C99300C77D96 /* ModuleRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136BCFD02539C99300C77D96 /* ModuleRow.swift */; };
 		136BCFD42539D0EA00C77D96 /* Grade.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136BCFD32539D0EA00C77D96 /* Grade.swift */; };
 		136BCFD72539D5CB00C77D96 /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136BCFD62539D5CB00C77D96 /* APIManager.swift */; };
-		136BCFDB2539D64300C77D96 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 136BCFDA2539D64300C77D96 /* Alamofire */; };
 		136BCFE42539DAB900C77D96 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136BCFE32539DAB900C77D96 /* APIResponse.swift */; };
-		13709B57253C381000C422B8 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 13709B56253C381000C422B8 /* SFSafeSymbols */; };
-		1373EE6B253CACD20088AB0F /* SwiftUIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 1373EE6A253CACD20088AB0F /* SwiftUIRefresh */; };
 		138E845A253AF7C800B1B8AD /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138E8459253AF7C800B1B8AD /* BackgroundView.swift */; };
 		138E845D253AF7F000B1B8AD /* GradeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138E845C253AF7F000B1B8AD /* GradeMode.swift */; };
 		138E8461253AFD1500B1B8AD /* HSDSans.otf in Resources */ = {isa = PBXBuildFile; fileRef = 138E8460253AFD1500B1B8AD /* HSDSans.otf */; };
 		138E8466253B00A200B1B8AD /* Placeholder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138E8465253B00A200B1B8AD /* Placeholder.swift */; };
-		138E846A253B04E600B1B8AD /* KeychainAccess in Frameworks */ = {isa = PBXBuildFile; productRef = 138E8469253B04E600B1B8AD /* KeychainAccess */; };
 		138E8472253B139A00B1B8AD /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138E8471253B139A00B1B8AD /* LoadingScreen.swift */; };
 		139812D5253A2C7F00CEB9D4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139812D4253A2C7F00CEB9D4 /* Color.swift */; };
 		139812D9253A347100CEB9D4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139812D8253A347100CEB9D4 /* LoginView.swift */; };
-		13EB1D2C253B6C57007D79D8 /* Haptica in Frameworks */ = {isa = PBXBuildFile; productRef = 13EB1D2B253B6C57007D79D8 /* Haptica */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		131AFE9C253DE4AE0050137E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		132160A92539BE74003D3489 /* iOSSC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		132160AC2539BE74003D3489 /* iOSSCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSSCApp.swift; sourceTree = "<group>"; };
 		132160AE2539BE74003D3489 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		132160B02539BE76003D3489 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		132160B32539BE76003D3489 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		132160B52539BE76003D3489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		136ACE692546C3B600F6EA93 /* Semester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Semester.swift; sourceTree = "<group>"; };
+		136ACE6C2546C43500F6EA93 /* Score.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Score.swift; sourceTree = "<group>"; };
+		136ACE6F2546C46C00F6EA93 /* Attendes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Attendes.swift; sourceTree = "<group>"; };
+		136ACE732546D9E700F6EA93 /* ModuleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleDetailView.swift; sourceTree = "<group>"; };
 		136BCFBE2539C77100C77D96 /* Student.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Student.swift; sourceTree = "<group>"; };
 		136BCFC12539C7B000C77D96 /* Exam.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Exam.swift; sourceTree = "<group>"; };
 		136BCFC42539C7D900C77D96 /* WorkExperience.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WorkExperience.swift; sourceTree = "<group>"; };
@@ -66,11 +78,13 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				1373EE6B253CACD20088AB0F /* SwiftUIRefresh in Frameworks */,
-				13EB1D2C253B6C57007D79D8 /* Haptica in Frameworks */,
-				138E846A253B04E600B1B8AD /* KeychainAccess in Frameworks */,
-				13709B57253C381000C422B8 /* SFSafeSymbols in Frameworks */,
-				136BCFDB2539D64300C77D96 /* Alamofire in Frameworks */,
+				136ACE5E2546C2DD00F6EA93 /* SwiftUIRefresh in Frameworks */,
+				136ACE662546C35200F6EA93 /* SwiftUICharts in Frameworks */,
+				136ACE4E2546C22400F6EA93 /* SFSafeSymbols in Frameworks */,
+				136ACE622546C30C00F6EA93 /* KeychainAccess in Frameworks */,
+				136ACE5A2546C2CB00F6EA93 /* Haptica in Frameworks */,
+				136ACE522546C2A700F6EA93 /* Alamofire in Frameworks */,
+				136ACE562546C2B900F6EA93 /* Sentry in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -96,6 +110,7 @@
 		132160AB2539BE74003D3489 /* iOSSC */ = {
 			isa = PBXGroup;
 			children = (
+				131AFE9C253DE4AE0050137E /* AppDelegate.swift */,
 				132160AC2539BE74003D3489 /* iOSSCApp.swift */,
 				132160BD2539BE91003D3489 /* View */,
 				132160BC2539BE8D003D3489 /* Model */,
@@ -121,15 +136,18 @@
 			isa = PBXGroup;
 			children = (
 				136BCFD62539D5CB00C77D96 /* APIManager.swift */,
+				136BCFE32539DAB900C77D96 /* APIResponse.swift */,
 				136BCFC72539C7FB00C77D96 /* Attempts.swift */,
+				136ACE6F2546C46C00F6EA93 /* Attendes.swift */,
 				136BCFC12539C7B000C77D96 /* Exam.swift */,
 				136BCFD32539D0EA00C77D96 /* Grade.swift */,
+				138E845C253AF7F000B1B8AD /* GradeMode.swift */,
 				136BCFCA2539C81B00C77D96 /* Module.swift */,
 				136BCFCD2539C86900C77D96 /* ResponseData.swift */,
+				136ACE6C2546C43500F6EA93 /* Score.swift */,
+				136ACE692546C3B600F6EA93 /* Semester.swift */,
 				136BCFBE2539C77100C77D96 /* Student.swift */,
 				136BCFC42539C7D900C77D96 /* WorkExperience.swift */,
-				136BCFE32539DAB900C77D96 /* APIResponse.swift */,
-				138E845C253AF7F000B1B8AD /* GradeMode.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -140,6 +158,7 @@
 				139812D8253A347100CEB9D4 /* LoginView.swift */,
 				132160AE2539BE74003D3489 /* ContentView.swift */,
 				138E8471253B139A00B1B8AD /* LoadingScreen.swift */,
+				136ACE732546D9E700F6EA93 /* ModuleDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -195,11 +214,13 @@
 			);
 			name = iOSSC;
 			packageProductDependencies = (
-				136BCFDA2539D64300C77D96 /* Alamofire */,
-				138E8469253B04E600B1B8AD /* KeychainAccess */,
-				13EB1D2B253B6C57007D79D8 /* Haptica */,
-				13709B56253C381000C422B8 /* SFSafeSymbols */,
-				1373EE6A253CACD20088AB0F /* SwiftUIRefresh */,
+				136ACE4D2546C22400F6EA93 /* SFSafeSymbols */,
+				136ACE512546C2A700F6EA93 /* Alamofire */,
+				136ACE552546C2B900F6EA93 /* Sentry */,
+				136ACE592546C2CB00F6EA93 /* Haptica */,
+				136ACE5D2546C2DD00F6EA93 /* SwiftUIRefresh */,
+				136ACE612546C30C00F6EA93 /* KeychainAccess */,
+				136ACE652546C35200F6EA93 /* SwiftUICharts */,
 			);
 			productName = iOSSC;
 			productReference = 132160A92539BE74003D3489 /* iOSSC.app */;
@@ -229,11 +250,13 @@
 			);
 			mainGroup = 132160A02539BE74003D3489;
 			packageReferences = (
-				136BCFD92539D64300C77D96 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				138E8468253B04E600B1B8AD /* XCRemoteSwiftPackageReference "KeychainAccess" */,
-				13EB1D2A253B6C57007D79D8 /* XCRemoteSwiftPackageReference "Haptica" */,
-				13709B55253C381000C422B8 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
-				1373EE69253CACD20088AB0F /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */,
+				136ACE4C2546C22400F6EA93 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
+				136ACE502546C2A700F6EA93 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				136ACE542546C2B900F6EA93 /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
+				136ACE582546C2CB00F6EA93 /* XCRemoteSwiftPackageReference "Haptica" */,
+				136ACE5C2546C2DD00F6EA93 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */,
+				136ACE602546C30C00F6EA93 /* XCRemoteSwiftPackageReference "KeychainAccess" */,
+				136ACE642546C35200F6EA93 /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = 132160AA2539BE74003D3489 /* Products */;
 			projectDirPath = "";
@@ -264,16 +287,21 @@
 			files = (
 				138E845A253AF7C800B1B8AD /* BackgroundView.swift in Sources */,
 				136BCFC22539C7B000C77D96 /* Exam.swift in Sources */,
+				136ACE742546D9E700F6EA93 /* ModuleDetailView.swift in Sources */,
+				131AFE9D253DE4AE0050137E /* AppDelegate.swift in Sources */,
+				136ACE702546C46C00F6EA93 /* Attendes.swift in Sources */,
 				138E845D253AF7F000B1B8AD /* GradeMode.swift in Sources */,
 				136BCFC82539C7FB00C77D96 /* Attempts.swift in Sources */,
 				136BCFD12539C99300C77D96 /* ModuleRow.swift in Sources */,
 				136BCFD42539D0EA00C77D96 /* Grade.swift in Sources */,
+				136ACE6D2546C43500F6EA93 /* Score.swift in Sources */,
 				139812D5253A2C7F00CEB9D4 /* Color.swift in Sources */,
 				136BCFC52539C7D900C77D96 /* WorkExperience.swift in Sources */,
 				138E8472253B139A00B1B8AD /* LoadingScreen.swift in Sources */,
 				136BCFE42539DAB900C77D96 /* APIResponse.swift in Sources */,
 				132160AF2539BE74003D3489 /* ContentView.swift in Sources */,
 				139812D9253A347100CEB9D4 /* LoginView.swift in Sources */,
+				136ACE6A2546C3B600F6EA93 /* Semester.swift in Sources */,
 				136BCFCB2539C81B00C77D96 /* Module.swift in Sources */,
 				136BCFBF2539C77100C77D96 /* Student.swift in Sources */,
 				136BCFD72539D5CB00C77D96 /* APIManager.swift in Sources */,
@@ -472,73 +500,99 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		136BCFD92539D64300C77D96 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+		136ACE4C2546C22400F6EA93 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			repositoryURL = "https://github.com/piknotech/SFSafeSymbols.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 5.2.2;
+				minimumVersion = 2.0.0;
 			};
 		};
-		13709B55253C381000C422B8 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */ = {
+		136ACE502546C2A700F6EA93 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/piknotech/SFSafeSymbols";
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 1.2.0;
+				minimumVersion = 5.3.0;
 			};
 		};
-		1373EE69253CACD20088AB0F /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */ = {
+		136ACE542546C2B900F6EA93 /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/timbersoftware/SwiftUIRefresh.git";
+			repositoryURL = "https://github.com/getsentry/sentry-cocoa.git";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 0.0.3;
+				minimumVersion = 6.0.6;
 			};
 		};
-		138E8468253B04E600B1B8AD /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+		136ACE582546C2CB00F6EA93 /* XCRemoteSwiftPackageReference "Haptica" */ = {
 			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 4.2.1;
-			};
-		};
-		13EB1D2A253B6C57007D79D8 /* XCRemoteSwiftPackageReference "Haptica" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/efremidze/Haptica";
+			repositoryURL = "https://github.com/efremidze/Haptica.git";
 			requirement = {
 				kind = upToNextMajorVersion;
 				minimumVersion = 3.0.2;
 			};
 		};
+		136ACE5C2546C2DD00F6EA93 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/siteline/SwiftUIRefresh.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.0.3;
+			};
+		};
+		136ACE602546C30C00F6EA93 /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.2.1;
+			};
+		};
+		136ACE642546C35200F6EA93 /* XCRemoteSwiftPackageReference "ChartView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/AppPear/ChartView.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.5.4;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		136BCFDA2539D64300C77D96 /* Alamofire */ = {
+		136ACE4D2546C22400F6EA93 /* SFSafeSymbols */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 136BCFD92539D64300C77D96 /* XCRemoteSwiftPackageReference "Alamofire" */;
-			productName = Alamofire;
-		};
-		13709B56253C381000C422B8 /* SFSafeSymbols */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 13709B55253C381000C422B8 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
+			package = 136ACE4C2546C22400F6EA93 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */;
 			productName = SFSafeSymbols;
 		};
-		1373EE6A253CACD20088AB0F /* SwiftUIRefresh */ = {
+		136ACE512546C2A700F6EA93 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 1373EE69253CACD20088AB0F /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */;
+			package = 136ACE502546C2A700F6EA93 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+		136ACE552546C2B900F6EA93 /* Sentry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 136ACE542546C2B900F6EA93 /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
+			productName = Sentry;
+		};
+		136ACE592546C2CB00F6EA93 /* Haptica */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 136ACE582546C2CB00F6EA93 /* XCRemoteSwiftPackageReference "Haptica" */;
+			productName = Haptica;
+		};
+		136ACE5D2546C2DD00F6EA93 /* SwiftUIRefresh */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 136ACE5C2546C2DD00F6EA93 /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */;
 			productName = SwiftUIRefresh;
 		};
-		138E8469253B04E600B1B8AD /* KeychainAccess */ = {
+		136ACE612546C30C00F6EA93 /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 138E8468253B04E600B1B8AD /* XCRemoteSwiftPackageReference "KeychainAccess" */;
+			package = 136ACE602546C30C00F6EA93 /* XCRemoteSwiftPackageReference "KeychainAccess" */;
 			productName = KeychainAccess;
 		};
-		13EB1D2B253B6C57007D79D8 /* Haptica */ = {
+		136ACE652546C35200F6EA93 /* SwiftUICharts */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 13EB1D2A253B6C57007D79D8 /* XCRemoteSwiftPackageReference "Haptica" */;
-			productName = Haptica;
+			package = 136ACE642546C35200F6EA93 /* XCRemoteSwiftPackageReference "ChartView" */;
+			productName = SwiftUICharts;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
