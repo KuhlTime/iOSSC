@@ -7,6 +7,9 @@
 
 import SwiftUI
 
+/**
+ `PlaceHolder` is a `ViewModifier` which can be applied to an `TextField` in order to - well - set a placeholder.
+ */
 struct PlaceHolder<T: View>: ViewModifier {
     var placeHolder: T
     var show: Bool
