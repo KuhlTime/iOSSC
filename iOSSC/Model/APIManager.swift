@@ -18,7 +18,7 @@ class APIManager: ObservableObject {
     @Published var data: ResponseData?
     @Published var loginState: LoginState = .loggedOut
     
-    private let enviorment: Enviorment
+    private let environment: Environment
     private var username: String?
     private var password: String?
     
@@ -27,8 +27,8 @@ class APIManager: ObservableObject {
      */
     private let keychain = Keychain(service: "me.kuhlti.iossc")
     
-    init(enviorment: Enviorment = .production) {
-        self.enviorment = enviorment
+    init(enviorment: Environment = .production) {
+        self.environment = enviorment
         
         autoLogin()
     }
@@ -138,7 +138,7 @@ class APIManager: ObservableObject {
             return
         }
         
-        AF.request(enviorment.url, method: .get, headers: getHeaders(username, password))
+        AF.request(environment.url, method: .get, headers: getHeaders(username, password))
             .responseDecodable { (response: DataResponse<APIResponse<ResponseData>, AFError>) in
                 if let error = response.error {
                     print(error.localizedDescription)
@@ -184,7 +184,7 @@ class APIManager: ObservableObject {
         return ["Authorization": "Basic \(base64Date.base64EncodedString())"]
     }
     
-    enum Enviorment {
+    enum Environment {
         case development, production
         
         var url: String {

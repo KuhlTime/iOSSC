@@ -7,18 +7,41 @@
 
 import SwiftUI
 
+let env: APIManager.Environment = .production
+
 @main
 struct iOSSCApp: App {
-    @ObservedObject var manager = APIManager(enviorment: .production)
+    @ObservedObject var manager = APIManager(enviorment: env)
     
     var body: some Scene {
         WindowGroup {
-            if (manager.isLoggedIn || manager.isRefreshing) {
-                ContentView().environmentObject(manager)
-            } else if (manager.isLoggingIn) {
-                LoadingScreen()
-            } else {
-                LoginView().environmentObject(manager)
+            ZStack {
+                if (manager.isLoggedIn || manager.isRefreshing) {
+                    ContentView().environmentObject(manager)
+                } else if (manager.isLoggingIn) {
+                    LoadingScreen()
+                } else {
+                    LoginView().environmentObject(manager)
+                }
+                
+                // Toaster
+            
+                
+                // Development Label
+                if (env == .development) {
+                    VStack {
+                        HStack {
+                            Text("Development Mode")
+                                .foregroundColor(.red)
+                                .font(.caption)
+                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
+                            Spacer()
+                        }
+                        .padding(.horizontal, 21)
+                        .padding(.top, -4)
+                        Spacer()
+                    }
+                }
             }
         }
     }
