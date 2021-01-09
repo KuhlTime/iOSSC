@@ -29,6 +29,6 @@ struct Module: Decodable, Identifiable {
      */
     var computedGrade: Grade? {
         let failed = attempts.exams != 0
-        return grade ?? examGrade ?? (failed ? 5.0 : nil)
+        return examGrade ?? grade ?? (failed ? 5.0 : nil)
     }
 }
