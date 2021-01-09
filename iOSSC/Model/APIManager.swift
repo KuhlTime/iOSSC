@@ -184,8 +184,19 @@ class APIManager: ObservableObject {
         return ["Authorization": "Basic \(base64Date.base64EncodedString())"]
     }
     
+    /**
+     Sets the environment the application should run in
+     */
     enum Environment {
-        case development, production
+        /**
+         In development mode the application requests a demo response in order to minimize traffic to the ossc server.
+         */
+        case development
+        
+        /**
+         In production mode the user recieves its original data from the ossc's servers
+         */
+        case production
         
         var url: String {
             switch self {
