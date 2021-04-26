@@ -203,7 +203,7 @@ class APIManager: ObservableObject {
             case .development:
                 return "https://api.kuhlti.me/ossc/test"
             case .production:
-                return "https://api.kuhlti.me/ossc/modules"
+                return "https://api.kuhlti.me/ossc"
             }
         }
     }
