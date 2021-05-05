@@ -18,41 +18,17 @@ struct LoginView: View {
     var body: some View {
         ZStack {
             BackgroundView()
-            Group {
-                VStack {
-                    Text("iOSSC").font(.custom("HSD Sans", size: 28)).fontWeight(.heavy).foregroundColor(Color(#colorLiteral(red: 0.9019607843, green: 0, blue: 0.1568627451, alpha: 1)))
-                    Text("by André Kuhlmann").font(.caption).foregroundColor(.gray).padding(.bottom)
-                    
-                    Group {
-                        TextField("", text: $username)
-                            .keyboardType(.default)
-                            .placeHolder(Text("Username").foregroundColor(.gray), show: username.isEmpty)
-                        SecureField("", text: $password)
-                            .placeHolder(Text("Password").foregroundColor(.gray), show: password.isEmpty)
-                        // Toggle("Save Credentials", isOn: $saveCredentials).padding(.vertical)
-                    }
-                    .disabled(manager.isLoggingIn)
-                    .foregroundColor(.black)
-                    .padding(.bottom)
-                    
-                    Button("Login") {
-                        login()
-                    }
-                    .disabled(manager.isLoggingIn)
-                    .foregroundColor(.white)
-                    .frame(maxWidth: .infinity)
-                    .padding(.vertical, 10)
-                    .background(Color(#colorLiteral(red: 0.9019607843, green: 0, blue: 0.1568627451, alpha: 1)))
-                    .cornerRadius(6)
-                    .onTapGesture {
-                        login()
-                    }
-                }
-                .padding()
+            
+            VStack(alignment: .leading) {
+                header
+                inputs
+                    .padding(.top, 42)
+                Spacer()
+                footer
             }
-            .background(Color.white)
-            .cornerRadius(14)
-            .padding(30)
+            .padding(.horizontal, 32)
+            .padding(.top, 88)
+            .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .topLeading)
         }
     }
     
@@ -61,6 +37,44 @@ struct LoginView: View {
         
         Haptic.impact(.medium).generate()
         manager.login(username, password)
+    }
+    
+    private var header: some View {
+        VStack(alignment: .leading) {
+            Text("IOSSC")
+                .font(.custom("HSD Sans", size: 38))
+                .foregroundColor(Color(hex: 0xE60028))
+            
+            Text("Melde dich mit deinem OSSC Account an.")
+                .font(.system(size: 28, weight: .bold))
+                .foregroundColor(.white)
+                .multilineTextAlignment(.leading)
+        }
+        .frame(maxWidth: .infinity, alignment: .topLeading)
+    }
+    
+    private var inputs: some View {
+        VStack {
+            InputField("Benutzername", text: $username)
+            InputField("Password", text: $password, isSecure: true)
+                .padding(.top, 8)
+        }
+    }
+    
+    private var footer: some View {
+        VStack {
+            Button("Login", action: login)
+                .frame(height: 47)
+                .frame(maxWidth: .infinity)
+                .foregroundColor(.white)
+                .background(Rectangle().foregroundColor(Color(hex: 0xE60028)))
+                .cornerRadius(5)
+            
+            Text("© 2021 André Kuhlmann")
+                .ignoresSafeArea()
+                .foregroundColor(.white)
+                .padding(.vertical)
+        }
     }
 }
 

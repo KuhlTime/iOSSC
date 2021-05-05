@@ -18,6 +18,10 @@ struct ContentView: View {
         UITableView.appearance().backgroundColor = .clear
         UITableViewCell.appearance().backgroundColor = .clear
         UINavigationBar.appearance().backgroundColor = .clear
+        UINavigationBar.appearance().largeTitleTextAttributes = [
+            .font : UIFont(name: "HSD Sans", size: 32)!,
+            .foregroundColor: UIColor(Color(hex: 0xE60028))
+        ]
     }
     
     var body: some View {

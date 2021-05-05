@@ -23,6 +23,7 @@ struct ModuleRow: View {
         HStack(spacing: 0) {
             VStack(alignment: .leading) {
                 Text(module.name)
+                    .foregroundColor(.white)
                 Text("\(module.id.description) - \(module.passed ? "Bestanden" : "Nicht Bestanden") - Versuche: \(module.attempts.exams)")
                     .font(.caption)
                     .foregroundColor(.gray)

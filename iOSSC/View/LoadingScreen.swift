@@ -15,7 +15,9 @@ struct LoadingScreen: View {
         ZStack {
             BackgroundView()
             VStack {
-                ProgressView().padding()
+                ProgressView()
+                    .progressViewStyle(CircularProgressViewStyle(tint: Color.white))
+                    .padding()
                 HStack {
                     Image(systemSymbol: .boltHorizontalCircleFill)
                     Text("Server is spooling up.")

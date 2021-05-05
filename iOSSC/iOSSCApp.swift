@@ -11,17 +11,21 @@ let env: APIManager.Environment = .production
 
 @main
 struct iOSSCApp: App {
-    @ObservedObject var manager = APIManager(enviorment: env)
+    
+    @ObservedObject
+    private var manager = APIManager(enviorment: env)
     
     var body: some Scene {
         WindowGroup {
             ZStack {
                 if (manager.isLoggedIn || manager.isRefreshing) {
-                    ContentView().environmentObject(manager)
+                    ContentView()
+                        .environmentObject(manager)
                 } else if (manager.isLoggingIn) {
                     LoadingScreen()
                 } else {
-                    LoginView().environmentObject(manager)
+                    LoginView()
+                        .environmentObject(manager)
                 }
                 
                 // Toaster
