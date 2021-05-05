@@ -1,8 +1,6 @@
-![Mockup](https://github.com/KuhlTime/iOSSC/blob/main/assets/mockup.png?raw=true)
+![Banner](assets/banner.png)
 
-# iOSSC
- [![twitter](https://img.shields.io/badge/Twitter-%40KuhlTime-1DA1F2)](https://twitter.com/@KuhlTime)
-
+[![twitter](https://img.shields.io/badge/Twitter-%40KuhlTime-1DA1F2)](https://twitter.com/@KuhlTime)
 [![swift-version](https://img.shields.io/badge/swift-5.3-orange.svg)](https://github.com/apple/swift)
 [![platforms](https://img.shields.io/badge/platform-iOS-lightgrey)]()
 
