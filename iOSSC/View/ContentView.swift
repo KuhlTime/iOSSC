@@ -17,9 +17,15 @@ struct ContentView: View {
     init() {
         UITableView.appearance().backgroundColor = .clear
         UITableViewCell.appearance().backgroundColor = .clear
+        
         UINavigationBar.appearance().backgroundColor = .clear
+        UINavigationBar.appearance().barStyle = .black
         UINavigationBar.appearance().largeTitleTextAttributes = [
             .font : UIFont(name: "HSD Sans", size: 32)!,
+            .foregroundColor: UIColor(Color(hex: 0xE60028))
+        ]
+        UINavigationBar.appearance().titleTextAttributes = [
+            .font : UIFont(name: "HSD Sans", size: 18)!,
             .foregroundColor: UIColor(Color(hex: 0xE60028))
         ]
     }
