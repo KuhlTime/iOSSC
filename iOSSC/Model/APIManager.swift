@@ -201,9 +201,9 @@ class APIManager: ObservableObject {
         var url: String {
             switch self {
             case .development:
-                return "https://api.kuhlti.me/ossc/test"
+                return "https://ossc.api.kuhlti.me/test"
             case .production:
-                return "https://api.kuhlti.me/ossc"
+                return "https://ossc.api.kuhlti.me"
             }
         }
     }
