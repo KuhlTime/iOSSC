@@ -23,6 +23,11 @@ class APIManager: ObservableObject {
     private var password: String?
     
     /**
+     When set a custom server url will be used
+     */
+    var customUrl: String?
+    
+    /**
      The KeychainAccess reference object
      */
     private let keychain = Keychain(service: "me.kuhlti.iossc")
@@ -80,6 +85,10 @@ class APIManager: ObservableObject {
             try keychain.set(username, key: "username")
             try keychain.set(password, key: "password")
             
+            if let url = customUrl {
+                try keychain.set(url, key: "customUrl")
+            }
+            
             print("Saved credentials")
         } catch {
             print("Error while setting keychain: \(error.localizedDescription)")
@@ -94,6 +103,7 @@ class APIManager: ObservableObject {
         do {
             try keychain.remove("username")
             try keychain.remove("password")
+            try keychain.remove("customUrl")
             
             print("Removed credentials")
         } catch {
@@ -110,6 +120,7 @@ class APIManager: ObservableObject {
         do {
             username = try keychain.get("username")
             password = try keychain.get("password")
+            customUrl = try keychain.get("customUrl")
             
             if (username != nil && password != nil) {
                 print("Restored credentials")
@@ -138,7 +149,7 @@ class APIManager: ObservableObject {
             return
         }
         
-        AF.request(environment.url, method: .get, headers: getHeaders(username, password))
+        AF.request(url, method: .get, headers: getHeaders(username, password))
             .responseDecodable { (response: DataResponse<APIResponse<ResponseData>, AFError>) in
                 if let error = response.error {
                     print(error.localizedDescription)
@@ -184,6 +195,17 @@ class APIManager: ObservableObject {
         return ["Authorization": "Basic \(base64Date.base64EncodedString())"]
     }
     
+    var baseUrl: String {
+        return customUrl ?? "https://ossc.api.kuhlti.me"
+    }
+    
+    var url: String {
+        switch (environment) {
+        case .development: return baseUrl + "/test"
+        case .production: return baseUrl
+        }
+    }
+    
     /**
      Sets the environment the application should run in
      */
@@ -197,15 +219,6 @@ class APIManager: ObservableObject {
          In production mode the user recieves its original data from the ossc's servers
          */
         case production
-        
-        var url: String {
-            switch self {
-            case .development:
-                return "https://ossc.api.kuhlti.me/test"
-            case .production:
-                return "https://ossc.api.kuhlti.me"
-            }
-        }
     }
     
     enum LoginState {

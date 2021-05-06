@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Haptica
+import SFSafeSymbols
 
 struct LoginView: View {
     @EnvironmentObject var manager: APIManager
@@ -15,9 +16,19 @@ struct LoginView: View {
     @State private var password = ""
     @State private var saveCredentials = false
     
+    @State private var editUrl: Bool = false
+    @State private var customUrl: String = ""
+    
     var body: some View {
         ZStack {
             BackgroundView()
+            
+            HStack(alignment: .top) {
+                Spacer()
+                infoButton
+            }
+            .frame(maxHeight: .infinity, alignment: .topTrailing)
+            .padding()
             
             VStack(alignment: .leading) {
                 header
@@ -36,11 +47,24 @@ struct LoginView: View {
         guard !username.isEmpty && !password.isEmpty else { return }
         
         Haptic.impact(.medium).generate()
+        manager.customUrl = customUrl.isEmpty ? nil : customUrl
         manager.login(username, password)
+    }
+    
+    private var infoButton: some View {
+        Button(action: {
+            editUrl.toggle()
+        }) {
+            Image(systemName: "gearshape.fill")
+                .resizable()
+                .frame(width: 24, height: 24)
+                .foregroundColor(.white)
+        }
     }
     
     private var header: some View {
         VStack(alignment: .leading) {
+                
             Text("IOSSC")
                 .font(.custom("HSD Sans", size: 38))
                 .foregroundColor(Color(hex: 0xE60028))
@@ -55,9 +79,18 @@ struct LoginView: View {
     
     private var inputs: some View {
         VStack {
+            if (editUrl) {
+                VStack {
+                    Text("Nur HTTPS erlaubt!")
+                        .foregroundColor(.white)
+                    InputField(manager.baseUrl, text: $customUrl)
+                }
+                .padding(.bottom, 8)
+            }
+            
             InputField("Benutzername", text: $username)
+                .padding(.bottom, 8)
             InputField("Password", text: $password, isSecure: true)
-                .padding(.top, 8)
         }
     }
     
