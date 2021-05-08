@@ -35,7 +35,7 @@ extension Grade {
             case .two: return 1.5.nextUp...2.5
             case .three: return 2.5.nextUp...3.5
             case .four: return 3.5.nextUp...4
-            case .five: return 5...5
+            case .five: return 4.nextUp...5
             }
         }
         
