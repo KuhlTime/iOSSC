@@ -1,7 +1,7 @@
 ![Banner](assets/banner.png)
 
 [![twitter](https://img.shields.io/badge/Twitter-%40KuhlTime-1DA1F2)](https://twitter.com/@KuhlTime)
-[![swift-version](https://img.shields.io/badge/swift-5.3-orange.svg)](https://github.com/apple/swift)
+[![swift-version](https://img.shields.io/badge/swift-5.4-orange.svg)](https://github.com/apple/swift)
 [![platforms](https://img.shields.io/badge/platform-iOS-lightgrey)]()
 
 
@@ -13,7 +13,7 @@ The Server then returns a developer friendly JSON object back to the client appl
 The endpoint for the API is located at [https://api.kuhlti.me/ossc/](https://api.kuhlti.me/ossc/).
 
 ## Web App
-Besides the iOS Client there is also a web based application available. <br>
+Besides the iOS Client there is also a web based application available.<br>
 **Check out: [hsd.kuhlti.me](https://hsd.kuhlti.me)**
 
 ## Installation
