@@ -19,7 +19,7 @@ extension Grade {
     }
     
     var emoji: String? {
-        return range?.returnValue(from: ["🥳", "☺️", "😐", "🥵", "🤬"])
+        return range?.returnValue(from: ["🥳", "☺️", "🙂", "🥵", "🤬"])
     }
     
     var color: Color? {
