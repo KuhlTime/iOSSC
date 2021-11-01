@@ -9,7 +9,6 @@
 /* Begin PBXBuildFile section */
 		131E86DA26432DFC002EF7C7 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131E86D926432DFC002EF7C7 /* InputField.swift */; };
 		132160AD2539BE74003D3489 /* iOSSCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132160AC2539BE74003D3489 /* iOSSCApp.swift */; };
-		132160AF2539BE74003D3489 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132160AE2539BE74003D3489 /* ContentView.swift */; };
 		132160B12539BE76003D3489 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 132160B02539BE76003D3489 /* Assets.xcassets */; };
 		132160B42539BE76003D3489 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 132160B32539BE76003D3489 /* Preview Assets.xcassets */; };
 		136BCFBF2539C77100C77D96 /* Student.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136BCFBE2539C77100C77D96 /* Student.swift */; };
@@ -25,6 +24,9 @@
 		136BCFE42539DAB900C77D96 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136BCFE32539DAB900C77D96 /* APIResponse.swift */; };
 		13709B57253C381000C422B8 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 13709B56253C381000C422B8 /* SFSafeSymbols */; };
 		1373EE6B253CACD20088AB0F /* SwiftUIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 1373EE6A253CACD20088AB0F /* SwiftUIRefresh */; };
+		1380D10F272FD9A800B05ECF /* LogoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1380D10E272FD9A800B05ECF /* LogoutButton.swift */; };
+		1380D111272FDC9D00B05ECF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1380D110272FDC9D00B05ECF /* ContentView.swift */; };
+		1380D113272FDDBE00B05ECF /* BigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1380D112272FDDBE00B05ECF /* BigButton.swift */; };
 		138E845A253AF7C800B1B8AD /* BackgroundView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138E8459253AF7C800B1B8AD /* BackgroundView.swift */; };
 		138E845D253AF7F000B1B8AD /* GradeMode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138E845C253AF7F000B1B8AD /* GradeMode.swift */; };
 		138E8461253AFD1500B1B8AD /* HSDSans.otf in Resources */ = {isa = PBXBuildFile; fileRef = 138E8460253AFD1500B1B8AD /* HSDSans.otf */; };
@@ -40,7 +42,6 @@
 		131E86D926432DFC002EF7C7 /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 		132160A92539BE74003D3489 /* iOSSC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		132160AC2539BE74003D3489 /* iOSSCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSSCApp.swift; sourceTree = "<group>"; };
-		132160AE2539BE74003D3489 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		132160B02539BE76003D3489 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		132160B32539BE76003D3489 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		132160B52539BE76003D3489 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,6 +55,9 @@
 		136BCFD32539D0EA00C77D96 /* Grade.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grade.swift; sourceTree = "<group>"; };
 		136BCFD62539D5CB00C77D96 /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		136BCFE32539DAB900C77D96 /* APIResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIResponse.swift; sourceTree = "<group>"; };
+		1380D10E272FD9A800B05ECF /* LogoutButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogoutButton.swift; sourceTree = "<group>"; };
+		1380D110272FDC9D00B05ECF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		1380D112272FDDBE00B05ECF /* BigButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigButton.swift; sourceTree = "<group>"; };
 		138E8459253AF7C800B1B8AD /* BackgroundView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BackgroundView.swift; sourceTree = "<group>"; };
 		138E845C253AF7F000B1B8AD /* GradeMode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradeMode.swift; sourceTree = "<group>"; };
 		138E8460253AFD1500B1B8AD /* HSDSans.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = HSDSans.otf; sourceTree = "<group>"; };
@@ -140,7 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				139812D8253A347100CEB9D4 /* LoginView.swift */,
-				132160AE2539BE74003D3489 /* ContentView.swift */,
+				1380D110272FDC9D00B05ECF /* ContentView.swift */,
 				138E8471253B139A00B1B8AD /* LoadingScreen.swift */,
 			);
 			path = View;
@@ -153,6 +157,8 @@
 				138E8459253AF7C800B1B8AD /* BackgroundView.swift */,
 				138E8465253B00A200B1B8AD /* Placeholder.swift */,
 				131E86D926432DFC002EF7C7 /* InputField.swift */,
+				1380D10E272FD9A800B05ECF /* LogoutButton.swift */,
+				1380D112272FDDBE00B05ECF /* BigButton.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -270,13 +276,15 @@
 				138E845D253AF7F000B1B8AD /* GradeMode.swift in Sources */,
 				136BCFC82539C7FB00C77D96 /* Attempts.swift in Sources */,
 				136BCFD12539C99300C77D96 /* ModuleRow.swift in Sources */,
+				1380D113272FDDBE00B05ECF /* BigButton.swift in Sources */,
 				136BCFD42539D0EA00C77D96 /* Grade.swift in Sources */,
+				1380D111272FDC9D00B05ECF /* ContentView.swift in Sources */,
 				139812D5253A2C7F00CEB9D4 /* Color.swift in Sources */,
 				131E86DA26432DFC002EF7C7 /* InputField.swift in Sources */,
 				136BCFC52539C7D900C77D96 /* WorkExperience.swift in Sources */,
 				138E8472253B139A00B1B8AD /* LoadingScreen.swift in Sources */,
 				136BCFE42539DAB900C77D96 /* APIResponse.swift in Sources */,
-				132160AF2539BE74003D3489 /* ContentView.swift in Sources */,
+				1380D10F272FD9A800B05ECF /* LogoutButton.swift in Sources */,
 				139812D9253A347100CEB9D4 /* LoginView.swift in Sources */,
 				136BCFCB2539C81B00C77D96 /* Module.swift in Sources */,
 				136BCFBF2539C77100C77D96 /* Student.swift in Sources */,
@@ -411,12 +419,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iOSSC/Preview Content\"";
 				DEVELOPMENT_TEAM = NSG52Q9F89;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOSSC/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -424,6 +433,7 @@
 				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = me.kuhlti.iOSSC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};
@@ -434,12 +444,13 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_ASSET_PATHS = "\"iOSSC/Preview Content\"";
 				DEVELOPMENT_TEAM = NSG52Q9F89;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = iOSSC/Info.plist;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -447,6 +458,7 @@
 				MARKETING_VERSION = 0.1.1;
 				PRODUCT_BUNDLE_IDENTIFIER = me.kuhlti.iOSSC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = 1;
 			};

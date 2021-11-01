@@ -96,12 +96,13 @@ struct LoginView: View {
     
     private var footer: some View {
         VStack {
-            Button("Login", action: login)
-                .frame(height: 47)
-                .frame(maxWidth: .infinity)
-                .foregroundColor(.white)
-                .background(Rectangle().foregroundColor(Color(hex: 0xE60028)))
-                .cornerRadius(5)
+            Button("Login") {
+                manager.login(username, password)
+                Haptic.impact(.medium).generate()
+            }
+            .buttonStyle(
+                BigButton(Color(hex: 0xE60028), Color(hex: 0xE60028).darker())
+            )
             
             Text("© 2021 André Kuhlmann")
                 .ignoresSafeArea()

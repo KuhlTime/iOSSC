@@ -34,14 +34,22 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(manager.modules, id: \.id, content: { module in
-                    ModuleRow(for: module, in: $mode).listRowBackground(Color.clear)
+                    ModuleRow(for: module, in: $mode)
+                        .listRowBackground(Color.clear)
                 })
             }
             .navigationTitle("iOSSC")
             .background(
                 BackgroundView()
             )
-            .navigationBarItems(leading: summaryLabel, trailing: HStack { logoutButton })
+            .toolbar(content: {
+                ToolbarItem(placement: .navigationBarLeading) {
+                    summaryLabel
+                }
+                ToolbarItem(placement: .navigationBarTrailing) {
+                    logoutButton
+                }
+            })
             .pullToRefresh(isShowing: $pullToRefreshShowing) {
                 manager.refresh {
                     pullToRefreshShowing = false
@@ -55,10 +63,7 @@ struct ContentView: View {
             Haptic.impact(.medium).generate()
             manager.logout()
         }
-        .foregroundColor(.black)
-        .padding(.vertical, 4)
-        .padding(.horizontal, 14)
-        .background(Capsule().foregroundColor(Color.white))
+        .foregroundColor(.white)
     }
     
     var summaryLabel: some View {

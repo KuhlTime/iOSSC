@@ -51,6 +51,7 @@ struct InputField_Previews: PreviewProvider {
     static var previews: some View {
         InputField("Placeholder", text: .constant(""))
             .padding()
-            .background(Color.red)
+            .background(Color.gray)
+            .previewLayout(.fixed(width: 300, height: 70))
     }
 }

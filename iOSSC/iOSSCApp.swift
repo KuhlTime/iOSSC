@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import SFSafeSymbols
 
 let env: APIManager.Environment = .production
 
@@ -28,9 +29,6 @@ struct iOSSCApp: App {
                         .environmentObject(manager)
                 }
                 
-                // Toaster
-            
-                
                 // Development Label
                 if (env == .development) {
                     VStack {
@@ -38,7 +36,6 @@ struct iOSSCApp: App {
                             Text("Development Mode")
                                 .foregroundColor(.red)
                                 .font(.caption)
-                                .fontWeight(/*@START_MENU_TOKEN@*/.bold/*@END_MENU_TOKEN@*/)
                             Spacer()
                         }
                         .padding(.horizontal, 21)
