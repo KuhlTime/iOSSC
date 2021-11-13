@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct WorkExperience: Decodable {
+struct WorkExperience: Decodable, Hashable {
     let semester: String
     let passed: Bool
 }

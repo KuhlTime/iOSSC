@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct Module: Decodable, Identifiable {
+struct Module: Decodable, Identifiable, Hashable {
     let exams: [Exam]
     let workExperiences: [WorkExperience]
     let id: Int
@@ -30,5 +30,9 @@ struct Module: Decodable, Identifiable {
     var computedGrade: Grade? {
         let failed = attempts.exams != 0
         return examGrade ?? grade ?? (failed ? 5.0 : nil)
+    }
+    
+    static func == (lhs: Module, rhs: Module) -> Bool {
+        return lhs.id == rhs.id
     }
 }

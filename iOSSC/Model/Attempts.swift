@@ -7,6 +7,6 @@
 
 import Foundation
 
-struct Attempts: Decodable {
+struct Attempts: Decodable, Hashable {
     let exams, workExperiences: Int
 }
