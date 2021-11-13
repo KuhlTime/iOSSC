@@ -6,8 +6,8 @@
         "repositoryURL": "https://github.com/Alamofire/Alamofire",
         "state": {
           "branch": null,
-          "revision": "f96b619bcb2383b43d898402283924b80e2c4bae",
-          "version": "5.4.3"
+          "revision": "d120af1e8638c7da36c8481fd61a66c0c08dc4fc",
+          "version": "5.4.4"
         }
       },
       {
@@ -15,8 +15,8 @@
         "repositoryURL": "https://github.com/efremidze/Haptica",
         "state": {
           "branch": null,
-          "revision": "4084702c85102c2d17d58e42ec5a750094944864",
-          "version": "3.0.2"
+          "revision": "e03932406d2f36f10beefd31717730b2c2fa9014",
+          "version": "3.0.3"
         }
       },
       {
