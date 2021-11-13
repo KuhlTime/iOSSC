@@ -13,6 +13,7 @@ struct ContentView: View {
     @EnvironmentObject var manager: APIManager
     @State private var mode: GradeMode = .colorEmoji
     @State private var pullToRefreshShowing = false
+    @State private var selection: Module? = nil
     
     init() {
         UITableView.appearance().backgroundColor = .clear
@@ -22,11 +23,11 @@ struct ContentView: View {
         UINavigationBar.appearance().barStyle = .black
         UINavigationBar.appearance().largeTitleTextAttributes = [
             .font : UIFont(name: "HSD Sans", size: 32)!,
-            .foregroundColor: UIColor(Color(hex: 0xE60028))
+            .foregroundColor: UIColor(.hsd)
         ]
         UINavigationBar.appearance().titleTextAttributes = [
             .font : UIFont(name: "HSD Sans", size: 18)!,
-            .foregroundColor: UIColor(Color(hex: 0xE60028))
+            .foregroundColor: UIColor(.hsd)
         ]
     }
     
@@ -34,11 +35,23 @@ struct ContentView: View {
         NavigationView {
             List {
                 ForEach(manager.modules, id: \.id, content: { module in
-                    ModuleRow(for: module, in: $mode)
-                        .listRowBackground(Color.clear)
+                    HStack {
+                        NavigationLink(
+                            destination: ModuleDetailView(for: module, in: $mode),
+                            tag: module,
+                            selection: $selection
+                        ) { EmptyView() }
+                        .frame(width: 0)
+                        .opacity(0)
+                        
+                        ModuleRow(for: module, in: $mode)
+                            .onTapGesture {
+                                selection = module
+                            }
+                    }
+                    .listRowBackground(Color.clear)
                 })
             }
-            .navigationTitle("iOSSC")
             .background(
                 BackgroundView()
             )
@@ -55,7 +68,9 @@ struct ContentView: View {
                     pullToRefreshShowing = false
                 }
             }
+            .navigationTitle("iOSSC")
         }
+        .accentColor(Color.white)
     }
     
     var logoutButton: some View {

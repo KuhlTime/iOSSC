@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		131253BD27402EC800788320 /* ModuleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131253BC27402EC800788320 /* ModuleDetailView.swift */; };
+		131253BF274062B400788320 /* GradePill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131253BE274062B400788320 /* GradePill.swift */; };
 		131E86DA26432DFC002EF7C7 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131E86D926432DFC002EF7C7 /* InputField.swift */; };
 		132160AD2539BE74003D3489 /* iOSSCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132160AC2539BE74003D3489 /* iOSSCApp.swift */; };
 		132160B12539BE76003D3489 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 132160B02539BE76003D3489 /* Assets.xcassets */; };
@@ -39,6 +41,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		131253BC27402EC800788320 /* ModuleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleDetailView.swift; sourceTree = "<group>"; };
+		131253BE274062B400788320 /* GradePill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradePill.swift; sourceTree = "<group>"; };
 		131E86D926432DFC002EF7C7 /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 		132160A92539BE74003D3489 /* iOSSC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		132160AC2539BE74003D3489 /* iOSSCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSSCApp.swift; sourceTree = "<group>"; };
@@ -146,6 +150,7 @@
 				139812D8253A347100CEB9D4 /* LoginView.swift */,
 				1380D110272FDC9D00B05ECF /* ContentView.swift */,
 				138E8471253B139A00B1B8AD /* LoadingScreen.swift */,
+				131253BC27402EC800788320 /* ModuleDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -159,6 +164,7 @@
 				131E86D926432DFC002EF7C7 /* InputField.swift */,
 				1380D10E272FD9A800B05ECF /* LogoutButton.swift */,
 				1380D112272FDDBE00B05ECF /* BigButton.swift */,
+				131253BE274062B400788320 /* GradePill.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -274,6 +280,7 @@
 				138E845A253AF7C800B1B8AD /* BackgroundView.swift in Sources */,
 				136BCFC22539C7B000C77D96 /* Exam.swift in Sources */,
 				138E845D253AF7F000B1B8AD /* GradeMode.swift in Sources */,
+				131253BD27402EC800788320 /* ModuleDetailView.swift in Sources */,
 				136BCFC82539C7FB00C77D96 /* Attempts.swift in Sources */,
 				136BCFD12539C99300C77D96 /* ModuleRow.swift in Sources */,
 				1380D113272FDDBE00B05ECF /* BigButton.swift in Sources */,
@@ -284,6 +291,7 @@
 				136BCFC52539C7D900C77D96 /* WorkExperience.swift in Sources */,
 				138E8472253B139A00B1B8AD /* LoadingScreen.swift in Sources */,
 				136BCFE42539DAB900C77D96 /* APIResponse.swift in Sources */,
+				131253BF274062B400788320 /* GradePill.swift in Sources */,
 				1380D10F272FD9A800B05ECF /* LogoutButton.swift in Sources */,
 				139812D9253A347100CEB9D4 /* LoginView.swift in Sources */,
 				136BCFCB2539C81B00C77D96 /* Module.swift in Sources */,

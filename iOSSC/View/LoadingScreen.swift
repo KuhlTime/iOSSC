@@ -20,7 +20,7 @@ struct LoadingScreen: View {
                     .padding()
                 HStack {
                     Image(systemSymbol: .boltHorizontalCircleFill)
-                    Text("Server is spooling up.")
+                    Text(randomLoadingMessage)
                         .multilineTextAlignment(.center)
                 }
                 .opacity(showText ? 1 : 0)
@@ -32,6 +32,23 @@ struct LoadingScreen: View {
                 showText = true
             }
         }
+    }
+    
+    var randomLoadingMessage: String {
+        let el: String! = [
+            "Starte den Server.",
+            "Hacke das OSSC.",
+            "Jetzt heißt es warten.",
+            "Bip Bup Bip...",
+            "Zähle bis 10.",
+            "Teile durch 0.",
+            "Du Streber.",
+            "Wärme das Internet auf.",
+            "Presse Daten durch die Leitung.",
+            "Beame Daten."
+        ].randomElement()
+        
+        return el
     }
 }
 
