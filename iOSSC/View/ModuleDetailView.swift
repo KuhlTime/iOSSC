@@ -35,7 +35,7 @@ struct ModuleDetailView: View {
                         sectionHeading(name: "Prüfungen")
                         
                         ForEach(module.exams, id: \.self, content: { exam in
-                            Row(exam.examinationDate.getFormattedDate(format: "dd.MM.yyyy")) {
+                            Row(exam.examinationDate.getFormattedDate(format: "dd.MM.yyyy"), color: exam.score != nil ? .white.opacity(0.2) : nil) {
                                 GradePill(for: exam.grade, in: $mode)
                             }
                         })
@@ -71,9 +71,11 @@ struct ModuleDetailView: View {
     struct Row<Content: View>: View {
         private let title: String
         private let trailing: Content
+        private let color: Color?
         
-        init(_ title: String, @ViewBuilder trailing: @escaping () -> Content) {
+        init(_ title: String, color: Color? = nil, @ViewBuilder trailing: @escaping () -> Content) {
             self.title = title
+            self.color = color
             self.trailing = trailing()
         }
         
@@ -86,7 +88,7 @@ struct ModuleDetailView: View {
             .padding(.horizontal, 24)
             .frame(height: 54)
             .background(
-                Capsule().foregroundColor(.black.opacity(0.2))
+                Capsule().foregroundColor(color ?? .black.opacity(0.2))
             )
         }
     }
@@ -113,10 +115,10 @@ struct ModuleDetailView: View {
     }
 }
 
-struct ModuleDetailView_Previews: PreviewProvider {
-    static let module = Module(exams: [Exam(grade: 1.6, passed: true, examinationDate: Date())], workExperiences: [WorkExperience(semester: "2021", passed: true), WorkExperience(semester: "2020", passed: false)], id: 123456, name: "Test Module", passed: true, creditPoints: 5, grade: 1.6, attempts: Attempts(exams: 1, workExperiences: 0))
-    
-    static var previews: some View {
-        ModuleDetailView(for: module, in: .constant(.normal))
-    }
-}
+//struct ModuleDetailView_Previews: PreviewProvider {
+//    static let module = Module(exams: [Exam(grade: 1.6, passed: true, examinationDate: Date())], workExperiences: [WorkExperience(semester: "2021", passed: true), WorkExperience(semester: "2020", passed: false)], id: 123456, name: "Test Module", passed: true, creditPoints: 5, grade: 1.6, attempts: Attempts(exams: 1, workExperiences: 0))
+//
+//    static var previews: some View {
+//        ModuleDetailView(for: module, in: .constant(.normal))
+//    }
+//}

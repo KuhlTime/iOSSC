@@ -12,6 +12,7 @@
 		131253C32740EFA100788320 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131253C22740EFA100788320 /* DateFormatter.swift */; };
 		131253C52740F06B00788320 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131253C42740F06B00788320 /* Date.swift */; };
 		131253CA27410F9500788320 /* Semester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131253C927410F9500788320 /* Semester.swift */; };
+		131253CC274111CE00788320 /* ExamScore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131253CB274111CE00788320 /* ExamScore.swift */; };
 		131E86DA26432DFC002EF7C7 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131E86D926432DFC002EF7C7 /* InputField.swift */; };
 		132160AD2539BE74003D3489 /* iOSSCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132160AC2539BE74003D3489 /* iOSSCApp.swift */; };
 		132160B12539BE76003D3489 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 132160B02539BE76003D3489 /* Assets.xcassets */; };
@@ -49,6 +50,7 @@
 		131253C22740EFA100788320 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
 		131253C42740F06B00788320 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
 		131253C927410F9500788320 /* Semester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Semester.swift; sourceTree = "<group>"; };
+		131253CB274111CE00788320 /* ExamScore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamScore.swift; sourceTree = "<group>"; };
 		131E86D926432DFC002EF7C7 /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 		132160A92539BE74003D3489 /* iOSSC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		132160AC2539BE74003D3489 /* iOSSCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSSCApp.swift; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 				136BCFE32539DAB900C77D96 /* APIResponse.swift */,
 				138E845C253AF7F000B1B8AD /* GradeMode.swift */,
 				131253C927410F9500788320 /* Semester.swift */,
+				131253CB274111CE00788320 /* ExamScore.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -301,6 +304,7 @@
 				139812D5253A2C7F00CEB9D4 /* Color.swift in Sources */,
 				131E86DA26432DFC002EF7C7 /* InputField.swift in Sources */,
 				136BCFC52539C7D900C77D96 /* WorkExperience.swift in Sources */,
+				131253CC274111CE00788320 /* ExamScore.swift in Sources */,
 				138E8472253B139A00B1B8AD /* LoadingScreen.swift in Sources */,
 				136BCFE42539DAB900C77D96 /* APIResponse.swift in Sources */,
 				131253BF274062B400788320 /* GradePill.swift in Sources */,

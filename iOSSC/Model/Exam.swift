@@ -11,4 +11,6 @@ struct Exam: Decodable, Hashable {
     let grade: Grade
     let passed: Bool
     let examinationDate: Date
+    let semester: Semester
+    let score: ExamScore?
 }
