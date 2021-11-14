@@ -33,6 +33,7 @@ struct ModuleRow: View {
             
             GradePill(for: module.computedGrade, in: $mode)
         }
+        .frame(minHeight: 44)
     }
     
     var text: String {
@@ -51,6 +52,7 @@ struct ModuleRow_Previews: PreviewProvider {
             ModuleRow(for: Module(exams: [], workExperiences: [], id: 12010, name: "Mathematik I", passed: true, creditPoints: 10, grade: 2.3, factor: 1, attempts: attempts))
             ModuleRow(for: Module(exams: [], workExperiences: [], id: 12010, name: "G 3 Grundlagen der Elektrotechnik III", passed: true, creditPoints: 10, grade: nil, factor: nil, attempts: attempts))
         }
+        .background(Color.black)
         .previewLayout(.fixed(width: 300, height: 60))
     }
 }
