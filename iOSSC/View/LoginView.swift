@@ -83,15 +83,30 @@ struct LoginView: View {
                 VStack {
                     Text("Nur HTTPS erlaubt!")
                         .foregroundColor(.white)
+                    
+                    Button(devModeButtonText) {
+                        manager.switchEnv()
+                    }
+                    .foregroundColor(.hsd)
+                    .padding()
+                    
                     InputField(manager.baseUrl, text: $customUrl)
                 }
                 .padding(.bottom, 8)
             }
             
-            InputField("Benutzername", text: $username)
-                .padding(.bottom, 8)
-            InputField("Password", text: $password, isSecure: true)
+            Group {
+                InputField("Benutzername", text: $username)
+                    .padding(.bottom, 8)
+                InputField("Password", text: $password, isSecure: true)
+            }
+            .disabled(manager.inDevelopment)
+            .blur(radius: manager.inDevelopment ? 3 : 0)
         }
+    }
+    
+    private var devModeButtonText: String {
+        return manager.inProduction ? "Aktiviere Entwickler Modus" : "Deaktiviere Entwickler Modus"
     }
     
     private var footer: some View {

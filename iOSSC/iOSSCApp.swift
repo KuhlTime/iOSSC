@@ -8,13 +8,11 @@
 import SwiftUI
 import SFSafeSymbols
 
-let env: APIManager.Environment = .production
-
 @main
 struct iOSSCApp: App {
     
     @ObservedObject
-    private var manager = APIManager(enviorment: env)
+    private var manager = APIManager(enviorment: .production)
     
     var body: some Scene {
         WindowGroup {
@@ -30,9 +28,10 @@ struct iOSSCApp: App {
                 }
                 
                 // Development Label
-                if (env == .development) {
+                if (manager.inDevelopment) {
                     VStack {
                         HStack {
+                            Spacer()
                             Text("Development Mode")
                                 .foregroundColor(.red)
                                 .font(.caption)

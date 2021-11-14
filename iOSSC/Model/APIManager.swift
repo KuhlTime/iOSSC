@@ -18,7 +18,7 @@ class APIManager: ObservableObject {
     @Published var data: ResponseData?
     @Published var loginState: LoginState = .loggedOut
     
-    private let environment: Environment
+    private var environment: Environment
     private var username: String?
     private var password: String?
     
@@ -188,6 +188,11 @@ class APIManager: ObservableObject {
             }
     }
     
+    func switchEnv() {
+        logout()
+        environment = environment == .production ? .development : .production
+    }
+    
     private func getHeaders(_ username: String, _ password: String) -> HTTPHeaders {
         let credentialData = "\(username):\(password)".data(using: .utf8)
         guard let cred = credentialData else { return ["" : ""] }
@@ -207,6 +212,18 @@ class APIManager: ObservableObject {
         case .development: return baseUrl + "/test"
         case .production: return baseUrl
         }
+    }
+    
+    var env: Environment {
+        return environment
+    }
+    
+    var inProduction: Bool {
+        return environment == .production
+    }
+    
+    var inDevelopment: Bool {
+        return environment == .development
     }
     
     /**
