@@ -15,6 +15,7 @@ struct Module: Decodable, Identifiable, Hashable {
     let passed: Bool
     let creditPoints: Int
     let grade: Grade?
+    let factor: Int?
     let attempts: Attempts
     
     private var examGrade: Grade? {

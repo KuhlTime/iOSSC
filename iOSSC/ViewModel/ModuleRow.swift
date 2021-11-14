@@ -48,8 +48,8 @@ struct ModuleRow_Previews: PreviewProvider {
     
     static var previews: some View {
         Group {
-            ModuleRow(for: Module(exams: [], workExperiences: [], id: 12010, name: "Mathematik I", passed: true, creditPoints: 10, grade: 2.3, attempts: attempts))
-            ModuleRow(for: Module(exams: [], workExperiences: [], id: 12010, name: "G 3 Grundlagen der Elektrotechnik III", passed: true, creditPoints: 10, grade: nil, attempts: attempts))
+            ModuleRow(for: Module(exams: [], workExperiences: [], id: 12010, name: "Mathematik I", passed: true, creditPoints: 10, grade: 2.3, factor: 1, attempts: attempts))
+            ModuleRow(for: Module(exams: [], workExperiences: [], id: 12010, name: "G 3 Grundlagen der Elektrotechnik III", passed: true, creditPoints: 10, grade: nil, factor: nil, attempts: attempts))
         }
         .previewLayout(.fixed(width: 300, height: 60))
     }
