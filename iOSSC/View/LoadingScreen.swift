@@ -44,7 +44,6 @@ struct LoadingScreen: View {
             "Teile durch 0.",
             "Du Streber.",
             "Wärme das Internet auf.",
-            "Presse Daten durch die Leitung.",
             "Beame Daten."
         ].randomElement()
         
