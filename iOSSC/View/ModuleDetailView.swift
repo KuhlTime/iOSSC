@@ -37,7 +37,7 @@ struct ModuleDetailView: View {
                         ForEach(module.exams.sorted(by: { a, b in
                             return a.examinationDate > b.examinationDate
                         }), id: \.self, content: { exam in
-                            Row(exam.examinationDate.getFormattedDate(format: "dd.MM.yyyy"), textColor: exam.score != nil ? .black : .white, color: exam.score != nil ? .white.opacity(0.7) : nil) {
+                            Row(exam.examinationDate.getFormattedDate(format: "dd.MM.yyyy"), textColor: .white, color: exam.score != nil ? .white.opacity(0.3) : nil) {
                                 GradePill(for: exam.grade, in: $mode)
                             }
                         })
