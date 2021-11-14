@@ -18,7 +18,7 @@ struct ContentView: View {
     init() {
         UITableView.appearance().backgroundColor = .clear
         UITableViewCell.appearance().backgroundColor = .clear
-        
+
         UINavigationBar.appearance().backgroundColor = .clear
         UINavigationBar.appearance().barStyle = .black
         UINavigationBar.appearance().largeTitleTextAttributes = [
@@ -52,6 +52,7 @@ struct ContentView: View {
                     .listRowBackground(Color.clear)
                 })
             }
+            .listStyle(.plain)
             .background(
                 BackgroundView()
             )

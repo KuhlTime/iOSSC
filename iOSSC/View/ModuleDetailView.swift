@@ -35,7 +35,9 @@ struct ModuleDetailView: View {
                         sectionHeading(name: "Prüfungen")
                         
                         ForEach(module.exams, id: \.self, content: { exam in
-                            row(title: exam.examinationDate)
+                            Row(exam.examinationDate.getFormattedDate(format: "dd.MM.yyyy")) {
+                                GradePill(for: exam.grade, in: $mode)
+                            }
                         })
                     }
                     
@@ -44,7 +46,9 @@ struct ModuleDetailView: View {
                             .padding(.top, module.exams.count > 0 ? 24 : 0)
                         
                         ForEach(module.workExperiences, id: \.self) { experience in
-                            row(title: experience.semester)
+                            Row(experience.semester) {
+                                Text(experience.passed ? "✅" : "❌")
+                            }
                         }
                     }
                 }
@@ -64,18 +68,27 @@ struct ModuleDetailView: View {
         }
     }
     
-    func row(title: String) -> some View {
-        HStack {
-            Text(title)
-                .padding(.horizontal, 8)
-                .foregroundColor(.white)
-                .listRowSeparator(.hidden)
-            Spacer()
+    struct Row<Content: View>: View {
+        private let title: String
+        private let trailing: Content
+        
+        init(_ title: String, @ViewBuilder trailing: @escaping () -> Content) {
+            self.title = title
+            self.trailing = trailing()
         }
-        .padding(16)
-        .background(
-            Capsule().foregroundColor(.black.opacity(0.2))
-        )
+        
+        var body: some View {
+            HStack {
+                Text(title).foregroundColor(.white)
+                Spacer()
+                trailing
+            }
+            .padding(.horizontal, 24)
+            .frame(height: 54)
+            .background(
+                Capsule().foregroundColor(.black.opacity(0.2))
+            )
+        }
     }
     
     func sectionHeading(name: String) -> some View {
@@ -101,7 +114,7 @@ struct ModuleDetailView: View {
 }
 
 struct ModuleDetailView_Previews: PreviewProvider {
-    static let module = Module(exams: [Exam(grade: 1.6, passed: true, examinationDate: "21.11.2021")], workExperiences: [WorkExperience(semester: "2021", passed: true), WorkExperience(semester: "2020", passed: false)], id: 123456, name: "Test Module", passed: true, creditPoints: 5, grade: 1.6, attempts: Attempts(exams: 1, workExperiences: 0))
+    static let module = Module(exams: [Exam(grade: 1.6, passed: true, examinationDate: Date())], workExperiences: [WorkExperience(semester: "2021", passed: true), WorkExperience(semester: "2020", passed: false)], id: 123456, name: "Test Module", passed: true, creditPoints: 5, grade: 1.6, attempts: Attempts(exams: 1, workExperiences: 0))
     
     static var previews: some View {
         ModuleDetailView(for: module, in: .constant(.normal))

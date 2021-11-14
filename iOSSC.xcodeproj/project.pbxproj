@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		131253BD27402EC800788320 /* ModuleDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131253BC27402EC800788320 /* ModuleDetailView.swift */; };
 		131253BF274062B400788320 /* GradePill.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131253BE274062B400788320 /* GradePill.swift */; };
+		131253C32740EFA100788320 /* DateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131253C22740EFA100788320 /* DateFormatter.swift */; };
+		131253C52740F06B00788320 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131253C42740F06B00788320 /* Date.swift */; };
+		131253CA27410F9500788320 /* Semester.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131253C927410F9500788320 /* Semester.swift */; };
 		131E86DA26432DFC002EF7C7 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 131E86D926432DFC002EF7C7 /* InputField.swift */; };
 		132160AD2539BE74003D3489 /* iOSSCApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 132160AC2539BE74003D3489 /* iOSSCApp.swift */; };
 		132160B12539BE76003D3489 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 132160B02539BE76003D3489 /* Assets.xcassets */; };
@@ -43,6 +46,9 @@
 /* Begin PBXFileReference section */
 		131253BC27402EC800788320 /* ModuleDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ModuleDetailView.swift; sourceTree = "<group>"; };
 		131253BE274062B400788320 /* GradePill.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GradePill.swift; sourceTree = "<group>"; };
+		131253C22740EFA100788320 /* DateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateFormatter.swift; sourceTree = "<group>"; };
+		131253C42740F06B00788320 /* Date.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Date.swift; sourceTree = "<group>"; };
+		131253C927410F9500788320 /* Semester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Semester.swift; sourceTree = "<group>"; };
 		131E86D926432DFC002EF7C7 /* InputField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputField.swift; sourceTree = "<group>"; };
 		132160A92539BE74003D3489 /* iOSSC.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSSC.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		132160AC2539BE74003D3489 /* iOSSCApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iOSSCApp.swift; sourceTree = "<group>"; };
@@ -140,6 +146,7 @@
 				136BCFC42539C7D900C77D96 /* WorkExperience.swift */,
 				136BCFE32539DAB900C77D96 /* APIResponse.swift */,
 				138E845C253AF7F000B1B8AD /* GradeMode.swift */,
+				131253C927410F9500788320 /* Semester.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -189,6 +196,8 @@
 			isa = PBXGroup;
 			children = (
 				139812D4253A2C7F00CEB9D4 /* Color.swift */,
+				131253C22740EFA100788320 /* DateFormatter.swift */,
+				131253C42740F06B00788320 /* Date.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -277,11 +286,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				131253C32740EFA100788320 /* DateFormatter.swift in Sources */,
 				138E845A253AF7C800B1B8AD /* BackgroundView.swift in Sources */,
 				136BCFC22539C7B000C77D96 /* Exam.swift in Sources */,
+				131253CA27410F9500788320 /* Semester.swift in Sources */,
 				138E845D253AF7F000B1B8AD /* GradeMode.swift in Sources */,
 				131253BD27402EC800788320 /* ModuleDetailView.swift in Sources */,
 				136BCFC82539C7FB00C77D96 /* Attempts.swift in Sources */,
+				131253C52740F06B00788320 /* Date.swift in Sources */,
 				136BCFD12539C99300C77D96 /* ModuleRow.swift in Sources */,
 				1380D113272FDDBE00B05ECF /* BigButton.swift in Sources */,
 				136BCFD42539D0EA00C77D96 /* Grade.swift in Sources */,

@@ -149,8 +149,11 @@ class APIManager: ObservableObject {
             return
         }
         
+        let jsonDecoder = JSONDecoder()
+        jsonDecoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601Full)
+        
         AF.request(url, method: .get, headers: getHeaders(username, password))
-            .responseDecodable { (response: DataResponse<APIResponse<ResponseData>, AFError>) in
+            .responseDecodable(decoder: jsonDecoder) { (response: DataResponse<APIResponse<ResponseData>, AFError>) in
                 if let error = response.error {
                     print(error.localizedDescription)
                     self.logout()
