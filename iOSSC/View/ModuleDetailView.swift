@@ -34,8 +34,10 @@ struct ModuleDetailView: View {
                     if module.exams.count > 0 {
                         sectionHeading(name: "Prüfungen")
                         
-                        ForEach(module.exams, id: \.self, content: { exam in
-                            Row(exam.examinationDate.getFormattedDate(format: "dd.MM.yyyy"), color: exam.score != nil ? .white.opacity(0.2) : nil) {
+                        ForEach(module.exams.sorted(by: { a, b in
+                            return a.examinationDate > b.examinationDate
+                        }), id: \.self, content: { exam in
+                            Row(exam.examinationDate.getFormattedDate(format: "dd.MM.yyyy"), textColor: exam.score != nil ? .black : .white, color: exam.score != nil ? .white.opacity(0.7) : nil) {
                                 GradePill(for: exam.grade, in: $mode)
                             }
                         })
@@ -45,7 +47,9 @@ struct ModuleDetailView: View {
                         sectionHeading(name: "Praktika")
                             .padding(.top, module.exams.count > 0 ? 24 : 0)
                         
-                        ForEach(module.workExperiences, id: \.self) { experience in
+                        ForEach(module.workExperiences.sorted(by: { a, b in
+                            return a.semester > b.semester
+                        }), id: \.self) { experience in
                             Row(experience.semester) {
                                 Text(experience.passed ? "✅" : "❌")
                             }
@@ -62,26 +66,29 @@ struct ModuleDetailView: View {
         )
         .navigationBarTitleDisplayMode(.inline)
         .toolbar {
-            ToolbarItem(placement: .navigationBarTrailing) {
-                GradePill(for: module.computedGrade, in: $mode)
-            }
+            EmptyView()
+//            ToolbarItem(placement: .navigationBarTrailing) {
+//                GradePill(for: module.computedGrade, in: $mode)
+//            }
         }
     }
     
     struct Row<Content: View>: View {
         private let title: String
-        private let trailing: Content
+        private let textColor: Color
         private let color: Color?
+        private let trailing: Content
         
-        init(_ title: String, color: Color? = nil, @ViewBuilder trailing: @escaping () -> Content) {
+        init(_ title: String, textColor: Color = .white, color: Color? = nil, @ViewBuilder trailing: @escaping () -> Content) {
             self.title = title
+            self.textColor = textColor
             self.color = color
             self.trailing = trailing()
         }
         
         var body: some View {
             HStack {
-                Text(title).foregroundColor(.white)
+                Text(title).foregroundColor(textColor)
                 Spacer()
                 trailing
             }
