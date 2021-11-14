@@ -32,7 +32,7 @@ struct ModuleDetailView: View {
                 
                 ScrollView {
                     if module.exams.count > 0 {
-                        sectionHeading(name: "Prüfungen")
+                        sectionHeading("Prüfungen")
                         
                         ForEach(module.exams.sorted(by: { a, b in
                             return a.examinationDate > b.examinationDate
@@ -44,7 +44,7 @@ struct ModuleDetailView: View {
                     }
                     
                     if module.workExperiences.count > 0 {
-                        sectionHeading(name: "Praktika")
+                        sectionHeading("Praktika")
                             .padding(.top, module.exams.count > 0 ? 24 : 0)
                         
                         ForEach(module.workExperiences.sorted(by: { a, b in
@@ -54,6 +54,12 @@ struct ModuleDetailView: View {
                                 Text(experience.passed ? "✅" : "❌")
                             }
                         }
+                    }
+                    
+                    if (module.exams.count + module.workExperiences.count) == 0 {
+                        Text("Keine Daten vorhanden")
+                            .font(.system(size: 24, weight: .bold))
+                            .foregroundColor(.white)
                     }
                 }
                 .padding(.horizontal)
@@ -100,9 +106,9 @@ struct ModuleDetailView: View {
         }
     }
     
-    func sectionHeading(name: String) -> some View {
+    func sectionHeading(_ title: String) -> some View {
         HStack {
-            Text(name)
+            Text(title)
                 .font(.system(size: 24, weight: .bold))
                 .foregroundColor(.white)
             Spacer()
