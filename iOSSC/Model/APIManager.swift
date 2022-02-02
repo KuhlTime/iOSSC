@@ -9,6 +9,9 @@ import Foundation
 import Combine
 import Alamofire
 import KeychainAccess
+import Sentry
+
+// TODO: Add Sentry Performance Monitoring https://sentry.io/kuhltime/iossc/getting-started/apple-ios/
 
 // Future Reference:
 // - https://medium.com/@rashidium/generic-api-response-handling-with-codable-in-swift-5-using-alamofire-5-9809522de87
@@ -149,6 +152,8 @@ class APIManager: ObservableObject {
             return
         }
         
+        let sentryTransaction = SentrySDK.startTransaction(name: "Fetch Modules", operation: "modules")
+        
         let jsonDecoder = JSONDecoder()
         jsonDecoder.dateDecodingStrategy = .formatted(DateFormatter.iso8601Full)
         
@@ -168,6 +173,7 @@ class APIManager: ObservableObject {
                         guard let data = apiResponse.data else {
                             print("No data in APIResponse")
                             completion?()
+                            sentryTransaction.finish(status: .dataLoss)
                             return
                         }
                         
@@ -175,6 +181,7 @@ class APIManager: ObservableObject {
                         self.data = data
                         self.loginState = .loggedIn
                         
+                        sentryTransaction.finish(status: .ok)
                         completion?()
                         
                     case .failed:
@@ -182,6 +189,7 @@ class APIManager: ObservableObject {
                         self.logout()
                         self.loginState = .error
                         
+                        sentryTransaction.finish(status: .dataLoss)
                         completion?()
                     }
                 }

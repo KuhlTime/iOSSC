@@ -30,6 +30,7 @@
 		136BCFE42539DAB900C77D96 /* APIResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 136BCFE32539DAB900C77D96 /* APIResponse.swift */; };
 		13709B57253C381000C422B8 /* SFSafeSymbols in Frameworks */ = {isa = PBXBuildFile; productRef = 13709B56253C381000C422B8 /* SFSafeSymbols */; };
 		1373EE6B253CACD20088AB0F /* SwiftUIRefresh in Frameworks */ = {isa = PBXBuildFile; productRef = 1373EE6A253CACD20088AB0F /* SwiftUIRefresh */; };
+		1375089827AB159E003B436C /* Sentry in Frameworks */ = {isa = PBXBuildFile; productRef = 1375089727AB159E003B436C /* Sentry */; };
 		1380D10F272FD9A800B05ECF /* LogoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1380D10E272FD9A800B05ECF /* LogoutButton.swift */; };
 		1380D111272FDC9D00B05ECF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1380D110272FDC9D00B05ECF /* ContentView.swift */; };
 		1380D113272FDDBE00B05ECF /* BigButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1380D112272FDDBE00B05ECF /* BigButton.swift */; };
@@ -91,6 +92,7 @@
 				138E846A253B04E600B1B8AD /* KeychainAccess in Frameworks */,
 				13709B57253C381000C422B8 /* SFSafeSymbols in Frameworks */,
 				136BCFDB2539D64300C77D96 /* Alamofire in Frameworks */,
+				1375089827AB159E003B436C /* Sentry in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -230,6 +232,7 @@
 				13EB1D2B253B6C57007D79D8 /* Haptica */,
 				13709B56253C381000C422B8 /* SFSafeSymbols */,
 				1373EE6A253CACD20088AB0F /* SwiftUIRefresh */,
+				1375089727AB159E003B436C /* Sentry */,
 			);
 			productName = iOSSC;
 			productReference = 132160A92539BE74003D3489 /* iOSSC.app */;
@@ -264,6 +267,7 @@
 				13EB1D2A253B6C57007D79D8 /* XCRemoteSwiftPackageReference "Haptica" */,
 				13709B55253C381000C422B8 /* XCRemoteSwiftPackageReference "SFSafeSymbols" */,
 				1373EE69253CACD20088AB0F /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */,
+				1375089627AB159E003B436C /* XCRemoteSwiftPackageReference "sentry-cocoa" */,
 			);
 			productRefGroup = 132160AA2539BE74003D3489 /* Products */;
 			projectDirPath = "";
@@ -458,7 +462,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.4;
+				MARKETING_VERSION = 0.2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = me.kuhlti.iOSSC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -483,7 +487,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 0.2.4;
+				MARKETING_VERSION = 0.2.5;
 				PRODUCT_BUNDLE_IDENTIFIER = me.kuhlti.iOSSC;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				PROVISIONING_PROFILE_SPECIFIER = "";
@@ -540,6 +544,14 @@
 				minimumVersion = 0.0.3;
 			};
 		};
+		1375089627AB159E003B436C /* XCRemoteSwiftPackageReference "sentry-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/getsentry/sentry-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 		138E8468253B04E600B1B8AD /* XCRemoteSwiftPackageReference "KeychainAccess" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/kishikawakatsumi/KeychainAccess";
@@ -573,6 +585,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 1373EE69253CACD20088AB0F /* XCRemoteSwiftPackageReference "SwiftUIRefresh" */;
 			productName = SwiftUIRefresh;
+		};
+		1375089727AB159E003B436C /* Sentry */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 1375089627AB159E003B436C /* XCRemoteSwiftPackageReference "sentry-cocoa" */;
+			productName = Sentry;
 		};
 		138E8469253B04E600B1B8AD /* KeychainAccess */ = {
 			isa = XCSwiftPackageProductDependency;
