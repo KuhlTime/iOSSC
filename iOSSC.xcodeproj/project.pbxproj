@@ -41,6 +41,7 @@
 		138E8472253B139A00B1B8AD /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 138E8471253B139A00B1B8AD /* LoadingScreen.swift */; };
 		139812D5253A2C7F00CEB9D4 /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139812D4253A2C7F00CEB9D4 /* Color.swift */; };
 		139812D9253A347100CEB9D4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 139812D8253A347100CEB9D4 /* LoginView.swift */; };
+		13DE76DE274166D7003A1384 /* ExamDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 13DE76DD274166D7003A1384 /* ExamDetailView.swift */; };
 		13EB1D2C253B6C57007D79D8 /* Haptica in Frameworks */ = {isa = PBXBuildFile; productRef = 13EB1D2B253B6C57007D79D8 /* Haptica */; };
 /* End PBXBuildFile section */
 
@@ -77,6 +78,7 @@
 		138E8471253B139A00B1B8AD /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
 		139812D4253A2C7F00CEB9D4 /* Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
 		139812D8253A347100CEB9D4 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		13DE76DD274166D7003A1384 /* ExamDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExamDetailView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -161,6 +163,7 @@
 				1380D110272FDC9D00B05ECF /* ContentView.swift */,
 				138E8471253B139A00B1B8AD /* LoadingScreen.swift */,
 				131253BC27402EC800788320 /* ModuleDetailView.swift */,
+				13DE76DD274166D7003A1384 /* ExamDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				131253BD27402EC800788320 /* ModuleDetailView.swift in Sources */,
 				136BCFC82539C7FB00C77D96 /* Attempts.swift in Sources */,
 				131253C52740F06B00788320 /* Date.swift in Sources */,
+				13DE76DE274166D7003A1384 /* ExamDetailView.swift in Sources */,
 				136BCFD12539C99300C77D96 /* ModuleRow.swift in Sources */,
 				1380D113272FDDBE00B05ECF /* BigButton.swift in Sources */,
 				136BCFD42539D0EA00C77D96 /* Grade.swift in Sources */,
