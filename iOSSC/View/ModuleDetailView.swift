@@ -8,8 +8,10 @@
 import SwiftUI
 
 struct ModuleDetailView: View {
-    @State var module: Module
-    @Binding var mode: GradeMode
+    @State private var module: Module
+    @State private var examModalShown = false
+    
+    @Binding private var mode: GradeMode
     
     init(for module: Module, in mode: Binding<GradeMode>) {
         self.module = module
@@ -40,6 +42,15 @@ struct ModuleDetailView: View {
                             Row(exam.examinationDate.getFormattedDate(format: "dd.MM.yyyy"), textColor: .white, color: exam.score != nil ? .white.opacity(0.3) : nil) {
                                 GradePill(for: exam.grade, in: $mode)
                             }
+                            .onTapGesture {
+                                examModalShown = true
+                            }
+                            .sheet(isPresented: $examModalShown) {
+                                examModalShown.toggle()
+                            } content: {
+                                ExamDetailView(for: exam)
+                            }
+
                         })
                     }
                     

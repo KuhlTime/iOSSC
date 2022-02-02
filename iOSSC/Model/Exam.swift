@@ -8,7 +8,7 @@
 import Foundation
 
 struct Exam: Decodable, Hashable {
-    let grade: Grade
+    let grade: Grade? // For the practical exam the grade gets returned as null
     let passed: Bool
     let examinationDate: Date
     let semester: Semester
