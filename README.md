@@ -7,7 +7,7 @@
 
 A iOS client application for retrieving your Grades from the OSSC servers.
 
-This application works in conjunction with my node-ossc web server which recives and processes the grades page provided by the OSSC.
+This application works in conjunction with my [hsd-ossc-api](https://github.com/KuhlTime/hsd-ossc-api) web server which recives and processes the grades page provided by the OSSC.
 The Server then returns a developer friendly JSON object back to the client application. 
 
 ## Installation
