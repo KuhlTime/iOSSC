@@ -8,7 +8,9 @@
 A iOS client application for retrieving your Grades from the OSSC servers.
 
 This application works in conjunction with my [hsd-ossc-api](https://github.com/KuhlTime/hsd-ossc-api) web server which recives and processes the grades page provided by the OSSC.
-The Server then returns a developer friendly JSON object back to the client application. 
+The Server then returns a developer friendly JSON object back to the client application.
+
+<a href="https://testflight.apple.com/join/FjL40hdY"><img src="assets/testflight.png" height="48"></a>
 
 ## Installation
 These steps while help you to install a local version of this app on your device.
