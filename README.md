@@ -1,7 +1,7 @@
 ![Banner](assets/banner.png)
 
 [![twitter](https://img.shields.io/badge/Twitter-%40KuhlTime-1DA1F2)](https://twitter.com/@KuhlTime)
-[![swift-version](https://img.shields.io/badge/swift-5.4-orange.svg)](https://github.com/apple/swift)
+[![swift-version](https://img.shields.io/badge/swift-5.5-orange.svg)](https://github.com/apple/swift)
 [![platforms](https://img.shields.io/badge/platform-iOS-lightgrey)]()
 
 
