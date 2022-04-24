@@ -24,13 +24,8 @@ struct Module: Decodable, Identifiable, Hashable {
         }?.grade
     }
     
-    /**
-     If the module has no grade assigned to it.
-     The grade of the first passed exam is getting returned.
-     */
     var computedGrade: Grade? {
-        let failed = attempts.exams != 0
-        return examGrade ?? grade ?? (failed ? 5.0 : nil)
+        return examGrade ?? grade
     }
     
     static func == (lhs: Module, rhs: Module) -> Bool {
